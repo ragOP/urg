@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  ORIVELLE NAIL FUNGUS PEN — UK ADVERTORIAL LISTICLE
+  Template: Consumer Focus UK (matches verbraucherfokus-test.de design system)
+
+  >>> BEFORE LAUNCH — replace the affiliate link in ONE place:
+      Find:  REPLACE_WITH_YOUR_AFFILIATE_LINK
+      (used on every CTA button)
+
+  >>> DYNAMIC H1 ROUTING (matches your URL-param architecture):
+      ?h1=best     -> Best/Comparison ad group   (default)
+      ?h1=pen      -> Pen ad group
+      ?h1=finger   -> Fingernail/Cure ad group
+      ?h1=symptom  -> Treatment/Symptom ad group
+  ============================================================
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b6cb8">
+<title>Best Nail Fungus Pens UK 2026 — Independent Comparison | Consumer Focus UK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#0b6cb8; --blue-dark:#095a99; --blue-darker:#074b80;
+    --blue-tint:#eef5fc; --blue-tint2:#e2eefa;
+    --green:#1a9d5a; --green-tint:#e8f6ee;
+    --gold:#e6a532; --gold-soft:#fbf2dd;
+    --red:#d64545; --red-tint:#fdeded;
+    --ink:#16212c; --text:#3c4754; --muted:#71808f;
+    --line:#e4e9ef; --bg:#f4f7fa; --card:#ffffff;
+    --radius:16px; --shadow:0 2px 12px rgba(16,40,70,.06);
+    --shadow-lg:0 10px 34px rgba(11,108,184,.16);
+    --maxw:760px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;padding-bottom:76px;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+  h1,h2,h3{color:var(--ink);line-height:1.2;margin:0}
+  h2{font-size:1.7rem;font-weight:800;letter-spacing:-.02em}
+  h3{font-size:1.18rem;font-weight:700}
+  p{margin:0 0 1rem}
+  a{color:var(--blue)}
+  em{color:var(--blue-dark);font-style:italic}
+  strong{color:var(--ink);font-weight:700}
+  img{max-width:100%}
+
+  /* top strip */
+  .strip{background:var(--blue-darker);color:#dceaf7;font-size:.78rem;text-align:center;padding:7px 14px;font-weight:500;letter-spacing:.01em}
+
+  /* header */
+  header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .hbar{display:flex;align-items:center;gap:11px;max-width:var(--maxw);margin:0 auto;padding:11px 18px}
+  .logo{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;font-weight:800;display:grid;place-items:center;font-size:.92rem;letter-spacing:.02em;flex:none}
+  .brand{display:flex;flex-direction:column;line-height:1.15}
+  .brand b{color:var(--ink);font-size:.97rem;font-weight:700}
+  .brand span{color:var(--muted);font-size:.74rem}
+  .hbadge{margin-left:auto;font-size:.72rem;color:var(--green);background:var(--green-tint);padding:5px 10px;border-radius:20px;font-weight:600;white-space:nowrap}
+
+  .eyebrow{display:inline-block;background:var(--blue-tint);color:var(--blue-dark);font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:6px 12px;border-radius:20px;margin:0 0 16px}
+
+  section{padding:30px 0}
+  .hero{padding-top:30px}
+  .hero h1{font-size:2.05rem;font-weight:800;letter-spacing:-.025em;margin-bottom:16px}
+  .hero .lead{font-size:1.12rem;color:var(--text)}
+
+  /* byline */
+  .byline{display:flex;align-items:center;gap:12px;margin-top:22px;padding:13px 15px;background:var(--card);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow)}
+  .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#5a86b8,#0b6cb8);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.92rem;flex:none}
+  .byline .who{line-height:1.25}
+  .byline .who b{font-size:.95rem;color:var(--ink)}
+  .byline .who span{font-size:.78rem;color:var(--muted);display:block}
+  .stars{color:var(--gold);letter-spacing:1px;font-size:.86rem;margin-left:auto;white-space:nowrap}
+
+  /* stat tiles */
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:22px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 8px;text-align:center;box-shadow:var(--shadow)}
+  .stat b{display:block;color:var(--blue-dark);font-size:1.18rem;font-weight:800;line-height:1}
+  .stat span{font-size:.7rem;color:var(--muted);display:block;margin-top:5px;line-height:1.25}
+  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.stat:last-child{grid-column:1/-1}}
+
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+  .pill{background:var(--green-tint);color:#137a45;font-size:.82rem;font-weight:600;padding:6px 12px;border-radius:20px}
+
+  /* criteria box */
+  .box{background:var(--blue-tint);border:1px solid var(--blue-tint2);border-radius:var(--radius);padding:20px 22px;margin-top:8px}
+  .box .bt{font-weight:700;color:var(--blue-dark);margin-bottom:10px;font-size:1rem}
+  .box ul{margin:0;padding-left:0;list-style:none}
+  .box li{padding:5px 0 5px 26px;position:relative;font-size:.97rem}
+  .box li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+
+  /* eyebrow label small */
+  .label{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin-bottom:7px}
+
+  /* steps */
+  .step{display:flex;gap:15px;padding:15px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+  .snum{width:33px;height:33px;border-radius:9px;background:var(--blue);color:#fff;font-weight:800;display:grid;place-items:center;flex:none;font-size:.95rem}
+  .step b{color:var(--ink);display:block;margin-bottom:2px}
+  .step p{margin:0;font-size:.95rem;color:var(--text)}
+
+  /* product cards */
+  .sub{color:var(--muted);font-size:.9rem;margin:4px 0 18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow);position:relative}
+  .card.win{border:2px solid var(--blue);box-shadow:var(--shadow-lg)}
+  .ribbon{position:absolute;top:-13px;left:22px;background:linear-gradient(135deg,var(--gold),#d6932a);color:#fff;font-size:.74rem;font-weight:700;padding:5px 13px;border-radius:20px;letter-spacing:.02em;box-shadow:0 3px 10px rgba(214,147,42,.35)}
+  .rank{position:absolute;top:-11px;left:22px;background:#5d6b7a;color:#fff;font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:20px}
+  .chead{display:flex;align-items:center;gap:14px;margin-top:8px}
+  .picon{width:62px;height:62px;border-radius:13px;background:var(--blue-tint);display:grid;place-items:center;flex:none;border:1px solid var(--blue-tint2)}
+  .picon svg{width:34px;height:34px}
+  .chead .pn{flex:1;min-width:0}
+  .chead .pn b{font-size:1.16rem;color:var(--ink);font-weight:700;display:block;line-height:1.2}
+  .scorebadge{text-align:center;flex:none}
+  .scorebadge .sv{font-size:1.5rem;font-weight:800;color:var(--blue-dark);line-height:1}
+  .scorebadge .sl{font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+  .winlabel{display:inline-block;background:var(--green-tint);color:#137a45;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:3px}
+
+  .pricerow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0}
+  .price-now{font-size:1.5rem;font-weight:800;color:var(--ink)}
+  .price-old{color:var(--muted);text-decoration:line-through;font-size:1rem}
+  .disc{background:var(--red-tint);color:var(--red);font-weight:700;font-size:.82rem;padding:3px 10px;border-radius:8px}
+  .offerflag{background:var(--gold-soft);color:#9a6a12;font-weight:700;font-size:.82rem;padding:6px 12px;border-radius:8px;display:inline-block;margin-bottom:4px}
+
+  /* metric bars */
+  .metrics{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;margin:16px 0 4px}
+  .metric{font-size:.84rem}
+  .metric .ml{display:flex;justify-content:space-between;margin-bottom:3px;color:var(--text)}
+  .metric .ml b{color:var(--blue-dark);font-weight:700}
+  .track{height:7px;background:var(--blue-tint2);border-radius:6px;overflow:hidden}
+  .fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-dark));border-radius:6px}
+
+  .benefits{list-style:none;padding:0;margin:14px 0 0}
+  .benefits li{position:relative;padding:6px 0 6px 27px;font-size:.96rem;border-top:1px solid var(--line)}
+  .benefits li:first-child{border-top:none}
+  .benefits li::before{content:"✓";position:absolute;left:0;top:6px;color:var(--green);font-weight:800}
+
+  .consbox{margin-top:15px;background:#fbfcfd;border:1px solid var(--line);border-radius:12px;padding:13px 16px}
+  .consbox .ct{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px}
+  .consbox ul{list-style:none;margin:0;padding:0}
+  .consbox li{position:relative;padding:4px 0 4px 24px;font-size:.92rem;color:var(--text)}
+  .consbox li::before{content:"✕";position:absolute;left:0;top:4px;color:var(--red);font-weight:700;font-size:.85rem}
+  .consbox.note li::before{content:"!";color:var(--gold);font-weight:800}
+
+  /* CTA */
+  .cta{display:block;text-align:center;background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;font-weight:700;font-size:1.08rem;padding:16px 22px;border-radius:13px;text-decoration:none;margin-top:18px;box-shadow:0 6px 18px rgba(11,108,184,.32);transition:transform .12s ease,box-shadow .12s ease}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(11,108,184,.4)}
+  .cta:active{transform:translateY(0)}
+  .ordered{text-align:center;font-size:.84rem;color:var(--text);margin-top:10px}
+  .ordered b{color:var(--blue-dark)}
+  .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:9px;font-size:.78rem;color:var(--muted)}
+
+  /* comparison table */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:460px;font-size:.92rem}
+  th,td{padding:11px 12px;text-align:center;border-bottom:1px solid var(--line)}
+  thead th{background:var(--blue-tint);color:var(--blue-dark);font-weight:700;font-size:.86rem}
+  thead th.win{background:var(--blue);color:#fff}
+  tbody th{text-align:left;font-weight:600;color:var(--ink);background:#fbfcfd;font-size:.88rem}
+  td.win{background:var(--blue-tint);font-weight:700;color:var(--blue-dark)}
+  .yes{color:var(--green);font-weight:800}
+  .no{color:#c0c8d0;font-weight:700}
+  tbody tr:last-child td,tbody tr:last-child th{border-bottom:none}
+  .tnote{font-size:.78rem;color:var(--muted);margin-top:10px;text-align:center}
+
+  /* fail list */
+  .fail{list-style:none;padding:0;margin:14px 0 0}
+  .fail li{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid var(--line)}
+  .fail li:last-child{border-bottom:none}
+  .xmark{width:26px;height:26px;border-radius:50%;background:var(--red-tint);color:var(--red);display:grid;place-items:center;font-weight:800;flex:none;font-size:.85rem}
+  .fail b{color:var(--ink)}
+
+  /* editor note */
+  .note-sec{background:var(--blue-tint);border-radius:var(--radius);padding:24px 22px}
+  .note-sec h2{margin-bottom:12px}
+
+  /* ingredient tiles */
+  .ings{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+  .ing{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 8px;text-align:center;box-shadow:var(--shadow)}
+  .ing .ic{font-size:1.5rem}
+  .ing b{display:block;font-size:.84rem;color:var(--ink);margin:6px 0 3px}
+  .ing span{font-size:.72rem;color:var(--muted);line-height:1.3;display:block}
+  @media(max-width:640px){.ings{grid-template-columns:repeat(2,1fr)}}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0}
+  .chip{display:flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:8px 14px;font-size:.88rem;font-weight:600;color:var(--ink);box-shadow:var(--shadow)}
+
+  .deep-head{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 16px;margin-bottom:18px;box-shadow:var(--shadow)}
+  .deep-head .sv{margin-left:auto;text-align:center}
+  .deep-head .sv b{font-size:1.7rem;color:var(--blue-dark);font-weight:800;line-height:1}
+  .deep-head .sv span{font-size:.7rem;color:var(--muted)}
+
+  /* testimonials */
+  .tcard{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px;margin-bottom:13px;box-shadow:var(--shadow)}
+  .tcard .ts{color:var(--gold);font-size:.9rem;letter-spacing:1px;margin-bottom:8px}
+  .tcard p{font-size:.96rem;margin:0 0 13px;color:var(--text)}
+  .tfoot{display:flex;align-items:center;gap:11px}
+  .tfoot .avatar{width:36px;height:36px;font-size:.8rem}
+  .tfoot b{font-size:.88rem;color:var(--ink)}
+  .tfoot span{font-size:.76rem;color:var(--muted)}
+  .verified{margin-left:auto;font-size:.72rem;color:var(--green);font-weight:600}
+
+  /* faq */
+  .faq{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;box-shadow:var(--shadow);overflow:hidden}
+  .faq summary{padding:16px 18px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;font-size:1rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::before{content:"+";color:var(--blue);font-weight:800;font-size:1.3rem;flex:none;transition:transform .2s}
+  .faq[open] summary::before{transform:rotate(45deg)}
+  .faq .fa{padding:0 18px 16px;font-size:.95rem;color:var(--text)}
+
+  /* author bio */
+  .bio{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);text-align:center}
+  .bio .avatar{width:58px;height:58px;font-size:1.1rem;margin:0 auto 12px}
+  .bio b{color:var(--ink);font-size:1.05rem}
+  .bio .role{color:var(--muted);font-size:.82rem;margin-bottom:12px}
+  .bio p{font-size:.93rem;margin:0}
+
+  /* final cta */
+  .final{background:linear-gradient(160deg,var(--blue),var(--blue-darker));border-radius:var(--radius);padding:30px 24px;text-align:center;color:#fff;box-shadow:var(--shadow-lg)}
+  .final .ff{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#bfe0f6;margin-bottom:10px}
+  .final h3{color:#fff;font-size:1.4rem;margin-bottom:8px}
+  .final .ts{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
+  .final .pricerow{justify-content:center}
+  .final .price-now{color:#fff}.final .price-old{color:#bcd6ec}
+  .final .cta{background:#fff;color:var(--blue-dark);box-shadow:0 6px 18px rgba(0,0,0,.2)}
+  .final .trust{color:#cfe4f5}
+
+  /* disclaimer + footer */
+  .disc{font-size:.8rem;color:var(--muted);line-height:1.6;margin-top:26px}
+  .disc strong{color:var(--text)}
+  footer{border-top:1px solid var(--line);margin-top:24px;padding:22px 0;text-align:center}
+  .flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font-size:.82rem;margin-bottom:10px}
+  .flinks a{color:var(--muted);text-decoration:none}
+  .copy{font-size:.76rem;color:var(--muted)}
+
+  /* sticky bottom bar */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;border-top:1px solid var(--line);box-shadow:0 -3px 14px rgba(16,40,70,.08);transform:translateY(110%);transition:transform .3s ease}
+  .sticky.show{transform:translateY(0)}
+  .sbar{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:12px;padding:9px 16px}
+  .sbar .picon{width:40px;height:40px}.sbar .picon svg{width:22px;height:22px}
+  .sbar .si{flex:1;min-width:0;line-height:1.2}
+  .sbar .si b{font-size:.86rem;color:var(--ink);display:block}
+  .sbar .si span{font-size:.74rem;color:var(--muted)}
+  .sbar .cta{margin:0;padding:11px 18px;font-size:.92rem;white-space:nowrap;flex:none}
+  @media(max-width:480px){.sbar .si span{display:none}}
+
+  /* image slots */
+  .figslot{margin:20px 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--blue-tint);box-shadow:var(--shadow)}
+  .figslot img{display:block;width:100%;height:auto}
+  .figslot.ph{display:grid;place-items:center;min-height:190px}
+  .figslot .phin{text-align:center;padding:26px}
+  .figslot .phin .ico{font-size:1.9rem}
+  .figslot .phin b{display:block;font-size:.9rem;margin-top:6px;color:var(--blue-dark)}
+  .figslot .phin span{font-size:.75rem;color:var(--muted)}
+  .card .figslot{margin:14px 0 2px}
+  .hero-fig{margin-top:22px;margin-bottom:0}
+
+  :focus-visible{outline:3px solid rgba(11,108,184,.45);outline-offset:2px;border-radius:6px}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="strip">Independent consumer comparison · Last updated: June 2026</div>
+
+<header>
+  <div class="hbar">
+    <div class="logo">CF</div>
+    <div class="brand"><b>Consumer Focus UK</b><span>Comparison &amp; Review</span></div>
+    <div class="hbadge">✓ Editorially reviewed</div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">2026 Comparison · Nail Fungus Pens</span>
+    <h1 id="hero-h1">I tested the most-bought nail fungus pens of 2026 — <em>one clearly stood out</em></h1>
+    <p class="lead">Over the past two months I put more than 30 nail fungus pens sold across the UK through real, hands-on use. Only a handful delivered — and one left every other brand behind.</p>
+
+    <figure class="figslot ph hero-fig" data-img="product">
+      <div class="phin"><div class="ico">🖼️</div><b>Orivelle product image</b><span>add URL to IMAGES.product (bottom of file)</span></div>
+    </figure>
+
+    <div class="byline">
+      <div class="avatar">EC</div>
+      <div class="who"><b>Emma Caldwell</b><span>Senior Editor · Consumer Focus UK</span></div>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>★★★★★</b><span>Self-tested</span></div>
+      <div class="stat"><b>30+</b><span>Pens tested</span></div>
+      <div class="stat"><b>8 wks</b><span>Hands-on use</span></div>
+      <div class="stat"><b>🇬🇧</b><span>Sold in the UK</span></div>
+      <div class="stat"><b>3</b><span>Finalists</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section style="padding-top:6px">
+  <div class="wrap">
+    <p>Nail fungus is one of those problems people deal with quietly. Nails turn yellow, thick and brittle, and suddenly you're hiding your feet in socks all summer. The frustrating part? Most "solutions" barely do anything.</p>
+    <p>Creams sit on top of the nail and never reach where it matters. Tablets come with a list of side effects long enough to put anyone off. Laser clinics can run well over £1,000. So it's no surprise the <strong>pen format</strong> has taken over — a slim brush-tip applicator you swipe on twice a day. No mess, no fuss, discreet.</p>
+    <p>But one question keeps coming up: <strong>does it actually work, or is it just clever marketing?</strong> The honest answer depends entirely on which pen you buy. The differences between brands are <strong>huge</strong> — same price, completely different formula.</p>
+
+    <div class="pillrow">
+      <span class="pill">No tablets</span>
+      <span class="pill">No mess</span>
+      <span class="pill">Discreet &amp; portable</span>
+    </div>
+
+    <div class="box">
+      <div class="bt">🔎 Judged on what actually matters</div>
+      <ul>
+        <li>Quality &amp; number of active botanical ingredients</li>
+        <li>Brush-tip precision &amp; how well it reaches the nail edges</li>
+        <li>Skin comfort, dry time and residue</li>
+        <li>Price per application &amp; current discount</li>
+        <li>Real user experience over weeks of use</li>
+      </ul>
+    </div>
+    <p style="margin-top:18px">👉 One product pulled clearly ahead. Here's the breakdown.</p>
+  </div>
+</section>
+
+<!-- HOW WE TESTED -->
+<section>
+  <div class="wrap">
+    <div class="label">Transparency</div>
+    <h2>How we tested — step by step</h2>
+    <p class="sub">So our ranking is something you can follow — scored from our own hands-on use plus publicly available manufacturer information.</p>
+
+    <div class="step"><div class="snum">1</div><div><b>Sourcing</b><p>Ordered 30+ nail fungus pens from UK pharmacies, high-street chains and online marketplaces — across every price bracket.</p></div></div>
+    <div class="step"><div class="snum">2</div><div><b>8 weeks of real use</b><p>Each finalist was used as directed for weeks at a time — on hands and feet, day and night.</p></div></div>
+    <div class="step"><div class="snum">3</div><div><b>Ingredient check</b><p>Compared the listed botanical ingredients and concentrations against manufacturer information and public product data.</p></div></div>
+    <div class="step"><div class="snum">4</div><div><b>Brush &amp; skin</b><p>Assessed the applicator precision, dry time, residue and how the formula felt on surrounding skin.</p></div></div>
+    <div class="step"><div class="snum">5</div><div><b>Price per use</b><p>Finally, the most honest measure: what each application actually costs — including current discounts.</p></div></div>
+  </div>
+</section>
+
+<!-- TOP 3 -->
+<section>
+  <div class="wrap">
+    <h2>The top 3 compared</h2>
+    <p class="sub">As of June 2026 · ranked by overall score</p>
+
+    <!-- WINNER -->
+    <div class="card win">
+      <span class="ribbon">🏆 #1 · Editor's Choice</span>
+      <div class="chead">
+        <div class="picon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0b6cb8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg>
+        </div>
+        <div class="pn"><b>Orivelle Nail Fungus Pen</b><span class="winlabel">Editor's Choice</span></div>
+        <div class="scorebadge"><div class="sv">9.9</div><div class="sl">Excellent</div></div>
+      </div>
+
+      <figure class="figslot ph" data-img="product">
+        <div class="phin"><div class="ico">🖼️</div><b>Orivelle product image</b><span>add URL to IMAGES.product</span></div>
+      </figure>
+
+      <div class="pricerow">
+        <span class="offerflag">⚡ 50% off — today only</span>
+      </div>
+      <div class="pricerow">
+        <span class="price-now">£19.95</span>
+        <span class="price-old">£39.90</span>
+        <span class="disc">−50%</span>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><div class="ml">Ingredient quality <b>9.9</b></div><div class="track"><div class="fill" style="width:99%"></div></div></div>
+        <div class="metric"><div class="ml">Value <b>9.8</b></div><div class="track"><div class="fill" style="width:98%"></div></div></div>
+        <div class="metric"><div class="ml">Skin comfort <b>9.7</b></div><div class="track"><div class="fill" style="width:97%"></div></div></div>
+        <div class="metric"><div class="ml">Application <b>10</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+      </div>
+
+      <ul class="benefits">
+        <li><strong>17 botanical ingredients —</strong> tea tree oil, peppermint, vitamin C, grape seed and more, blended to support the look of healthier nails.</li>
+        <li><strong>Precision brush tip —</strong> reaches the nail edges and cuticle that creams and drops usually miss.</li>
+        <li><strong>Works on fingernails &amp; toenails —</strong> one pen for both, on nails of any size.</li>
+        <li><strong>Quick-dry, zero mess —</strong> absorbs fast with no greasy residue. Discreet enough to use anywhere.</li>
+        <li><strong>30-day money-back guarantee —</strong> try it risk-free.</li>
+        <li><strong>Up to 50% off right now —</strong> limited stock through the official shop.</li>
+      </ul>
+
+      <div class="consbox note">
+        <div class="ct">Worth noting</div>
+        <ul><li>High demand — stock through the official shop is currently limited.</li></ul>
+      </div>
+
+      <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">See the #1 pick &amp; today's price →</a>
+      <p class="ordered">🔥 Ordered <b>1,290×</b> this week</p>
+      <div class="trust"><span>✓ 30-day guarantee</span><span>🔒 Secure checkout</span><span>🚚 Fast UK delivery</span></div>
+    </div>
+
+    <!-- #2 -->
+    <div class="card">
+      <span class="rank">#2</span>
+      <div class="chead">
+        <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="#5d6b7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg></div>
+        <div class="pn"><b>Pen B</b><span style="font-size:.84rem;color:var(--muted)">Single-oil formula</span></div>
+        <div class="scorebadge"><div class="sv">9.0</div><div class="sl">Good</div></div>
+      </div>
+      <div class="pricerow"><span class="price-now">£29.99</span></div>
+      <ul class="benefits">
+        <li><strong>Tea tree oil base —</strong> a clean, recognisable botanical ingredient.</li>
+        <li><strong>Decent brush applicator —</strong> applies neatly without dripping.</li>
+        <li><strong>Quick-drying solution —</strong> no long wait before socks or shoes.</li>
+        <li><strong>Gentle on surrounding skin.</strong></li>
+      </ul>
+      <div class="consbox">
+        <div class="ct">Behind the winner</div>
+        <ul>
+          <li>Far fewer botanical ingredients than Orivelle's 17</li>
+          <li>Higher price per pen</li>
+          <li>No introductory discount currently available</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- #3 -->
+    <div class="card">
+      <span class="rank">#3</span>
+      <div class="chead">
+        <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="#5d6b7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg></div>
+        <div class="pn"><b>Pen C</b><span style="font-size:.84rem;color:var(--muted)">Budget option</span></div>
+        <div class="scorebadge"><div class="sv">8.5</div><div class="sl">Good</div></div>
+      </div>
+      <div class="pricerow"><span class="price-now">£24.99</span></div>
+      <ul class="benefits">
+        <li><strong>Compact, travel-friendly design —</strong> slim and discreet.</li>
+        <li><strong>Plant-based solution —</strong> a simple botanical blend.</li>
+        <li><strong>Satisfaction guarantee —</strong> from the manufacturer.</li>
+      </ul>
+      <div class="consbox">
+        <div class="ct">Behind the winner</div>
+        <ul>
+          <li>Thinnest formula of the three — more applications needed</li>
+          <li>Brush tip less precise around the nail edges</li>
+          <li>Higher cost per use than the winner</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section>
+  <div class="wrap">
+    <div class="label">Side by side</div>
+    <h2>Orivelle vs the competition</h2>
+    <p class="sub">Where the winner separates itself, row by row.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th class="win">🏆 Orivelle</th><th>Pen B</th><th>Pen C</th></tr></thead>
+        <tbody>
+          <tr><th>Botanical ingredients</th><td class="win">17</td><td>Few</td><td>Few</td></tr>
+          <tr><th>Precision brush tip</th><td class="win"><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">—</span></td></tr>
+          <tr><th>Fingernails &amp; toenails</th><td class="win"><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><th>Quick-dry, no residue</th><td class="win"><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">—</span></td></tr>
+          <tr><th>Price</th><td class="win">£19.95</td><td>£29.99</td><td>£24.99</td></tr>
+          <tr><th>Current discount</th><td class="win">−50%</td><td>—</td><td>—</td></tr>
+          <tr><th>30-day guarantee</th><td class="win"><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><th>Overall score</th><td class="win">9.9</td><td>9.0</td><td>8.5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tnote">Based on publicly available information (as of June 2026). Product details may change.</p>
+    <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">See the winner →</a>
+  </div>
+</section>
+
+<!-- WHY MOST FAIL -->
+<section>
+  <div class="wrap">
+    <div class="label">What most people don't know</div>
+    <h2>Why most nail fungus pens disappoint</h2>
+    <p class="sub">The UK has dozens of pens on the shelves — in our testing, the large majority failed for the same four reasons.</p>
+    <ul class="fail">
+      <li><div class="xmark">✕</div><div><b>Filler-heavy formulas.</b> The label lists botanicals — but the active ingredients are barely there, too diluted to do much for the look of your nails.</div></li>
+      <li><div class="xmark">✕</div><div><b>Label ≠ contents.</b> More than once, what was inside didn't match what the front of the pen promised.</div></li>
+      <li><div class="xmark">✕</div><div><b>A cheap brush.</b> A wide, sloppy tip drips and wastes the solution instead of placing it precisely on the nail.</div></li>
+      <li><div class="xmark">✕</div><div><b>One single ingredient.</b> Instead of a considered blend, many rely on a single oil — and hope the marketing does the rest.</div></li>
+    </ul>
+    <p style="margin-top:16px">Of every pen we tested, <strong>only three</strong> delivered what they promised. Those are the three above — and at the very top sits the only one that impressed in <strong>every</strong> category.</p>
+  </div>
+</section>
+
+<!-- EDITOR NOTE -->
+<section>
+  <div class="wrap note-sec">
+    <div class="label">📝 Editor's note</div>
+    <h2>A word from me — <em>why only three?</em></h2>
+    <p>A fair question. What surprised me most: the majority simply didn't contain the botanicals the label promised — barely-there blends, missing ingredients, formulas you'd struggle to tell apart from water.</p>
+    <p>And if you ask me personally which pen I'd reach for tomorrow morning? <strong>Orivelle.</strong> Without hesitation. It's the cleanest formula in the comparison, the most thought-through blend, and the only one currently available at a price most readers can actually justify.</p>
+    <div class="byline" style="margin-top:18px">
+      <div class="avatar">EC</div>
+      <div class="who"><b>Emma Caldwell</b><span>Senior Editor · Consumer Focus UK</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY #1 DEEP DIVE -->
+<section>
+  <div class="wrap">
+    <div class="label">🔥 Our clear recommendation</div>
+    <h2>Why the Orivelle pen takes #1</h2>
+
+    <div class="deep-head" style="margin-top:18px">
+      <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b6cb8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg></div>
+      <div><b style="color:var(--ink);font-size:1.05rem">Orivelle Nail Fungus Pen</b><br><span style="font-size:.82rem;color:var(--muted)">#1 · Editor's Choice</span></div>
+      <div class="sv"><b>9.9</b><br><span>/10</span></div>
+    </div>
+
+    <p>Across the most-searched nail fungus pens, the <strong>Orivelle pen</strong> came out ahead in every category that counts. The slim brush-tip applicator places the solution exactly where creams and drops can't reach — along the nail edges, into the cuticle and around the nail bed.</p>
+
+    <figure class="figslot ph" data-img="apply">
+      <div class="phin"><div class="ico">🖼️</div><b>Application / lifestyle image</b><span>add URL to IMAGES.apply — use your own or licensed stock</span></div>
+    </figure>
+
+    <h3 style="margin:20px 0 8px">A considered 17-ingredient botanical blend</h3>
+    <p>Rather than a single oil, Orivelle leans on a blend of plant-based ingredients widely used in natural nail care:</p>
+
+    <div class="ings">
+      <div class="ing"><div class="ic">🌿</div><b>Tea Tree Oil</b><span>The lead botanical, long used in natural nail care.</span></div>
+      <div class="ing"><div class="ic">🍃</div><b>Peppermint</b><span>A fresh, cooling botanical for the nail area.</span></div>
+      <div class="ing"><div class="ic">🍊</div><b>Vitamin C</b><span>Supports the look of strong, healthy nails.</span></div>
+      <div class="ing"><div class="ic">🍇</div><b>Grape Seed</b><span>Helps soften and moisturise dry nails &amp; skin.</span></div>
+    </div>
+
+    <p>The nourishing oils are designed to address the look of discolouration, brittleness and rough texture as the nail grows out — while the precise brush keeps every drop where you want it.</p>
+
+    <div class="chips">
+      <span class="chip">🖌️ Precise, no-mess application</span>
+      <span class="chip">👍 Fingernails &amp; toenails</span>
+      <span class="chip">⚡ Discreet &amp; portable</span>
+    </div>
+
+    <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">Go to the official shop →</a>
+    <p class="ordered">🔥 Ordered <b>1,290×</b> this week · £19.95 instead of £39.90</p>
+    <div class="trust"><span>✓ 30-day money-back</span><span>🔒 Secure checkout</span><span>🚚 Fast delivery</span></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <div class="label">Readers report</div>
+    <h2>What readers have written to us</h2>
+    <p class="sub">Individual experiences. Results can vary and are neither typical nor guaranteed.</p>
+
+    <div class="tcard">
+      <div class="ts">★★★★★</div>
+      <p>"I'd tried creams for months with nothing to show for it. The brush is the bit that won me over — it actually gets right into the edges. Three weeks in and I'm finally not embarrassed to wear sandals."</p>
+      <div class="tfoot"><div class="avatar">SM</div><div><b>Sarah M.</b><br><span>Manchester</span></div><span class="verified">✓ Verified</span></div>
+    </div>
+    <div class="tcard">
+      <div class="ts">★★★★★</div>
+      <p>"Sceptical at first, I'll admit. But it dries in seconds, there's no greasy mess and I can pop it in my bag. Easiest thing I've added to my routine in ages."</p>
+      <div class="tfoot"><div class="avatar">JT</div><div><b>James T.</b><br><span>Bristol</span></div><span class="verified">✓ Verified</span></div>
+    </div>
+    <div class="tcard">
+      <div class="ts">★★★★☆</div>
+      <p>"Lovely and simple — brush on twice a day and that's it. I like how discreet it is. Curious to see how my nails look after a couple of months, but I'm pleased so far."</p>
+      <div class="tfoot"><div class="avatar">LP</div><div><b>Linda P.</b><br><span>Leeds</span></div><span class="verified">✓ Verified</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="label">Common questions</div>
+    <h2>What readers ask most</h2>
+    <div style="margin-top:16px"></div>
+
+    <details class="faq"><summary>Is Orivelle legit?</summary><div class="fa">Orivelle is a regularly available cosmetic nail-care pen sold through the official shop, and it comes with a 30-day money-back guarantee. To make sure you receive genuine stock, the current discount and the full guarantee, order only through the official seller.</div></details>
+    <details class="faq"><summary>How quickly will I see a difference?</summary><div class="fa">This varies a lot from person to person, and nails grow slowly, so any cosmetic improvement naturally takes time and consistency. The brush-tip applicator is designed for twice-daily use on clean, dry nails. Individual experiences are neither typical nor guaranteed.</div></details>
+    <details class="faq"><summary>Who is Orivelle for?</summary><div class="fa">Adults who want a simple, discreet, no-mess way to support the appearance of fingernails or toenails — without tablets or clinic visits. If you have a medical concern, are pregnant or breastfeeding, speak to a doctor or pharmacist first.</div></details>
+    <details class="faq"><summary>Where can I buy it?</summary><div class="fa">Only through the official shop. The direct route makes sure you get genuine product, the current discount and the full 30-day guarantee.</div></details>
+    <details class="faq"><summary>Is there a guarantee?</summary><div class="fa">Yes — Orivelle comes with a 30-day money-back guarantee. If you're not satisfied, contact the seller's customer service for a straightforward return.</div></details>
+  </div>
+</section>
+
+<!-- AUTHOR BIO -->
+<section>
+  <div class="wrap bio">
+    <div class="avatar">EC</div>
+    <b>Emma Caldwell</b>
+    <div class="role">Senior Editor · Consumer Focus UK</div>
+    <p>Emma has spent over eight years testing health and wellness products, focused on everyday real-world usefulness rather than marketing promises. Her aim is to simplify the buying decision — cutting through the noise to find the products that genuinely hold up in daily life.</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section>
+  <div class="wrap">
+    <div class="final">
+      <div class="ff">🏆 Don't miss this offer</div>
+      <h3>Orivelle Nail Fungus Pen</h3>
+      <div class="ts">★★★★★ · 9.9/10</div>
+      <div class="pricerow">
+        <span class="price-now">£19.95</span>
+        <span class="price-old">£39.90</span>
+        <span class="disc">−50%</span>
+      </div>
+      <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">Go to the offer →</a>
+      <p class="ordered" style="color:#cfe4f5">🔥 Ordered <b style="color:#fff">1,290×</b> this week</p>
+      <div class="trust"><span>✓ 30-day guarantee</span><span>🔒 Secure checkout</span><span>🚚 Fast UK delivery</span></div>
+    </div>
+
+    <p class="disc"><strong>Disclaimer:</strong> This website is for information purposes only and does not constitute medical advice, diagnosis or treatment. Orivelle is a cosmetic nail-care product and is not intended to diagnose, treat, cure or prevent any disease. Always consult a doctor or pharmacist before use, particularly if you have a medical condition, are pregnant or breastfeeding. Individual results can vary; testimonials and before/after examples are neither typical nor guaranteed.</p>
+    <p class="disc"><strong>Disclosure:</strong> This website may contain affiliate links; we may earn a commission at no extra cost to you. We are an independent comparison website and not the manufacturer of the products featured. Photos of people may show models; author names may be pseudonyms of the editorial team.</p>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="flinks"><a href="#">About Us</a><a href="#">Privacy Policy</a><a href="#">Contact</a><a href="#">Terms</a></div>
+      <div class="copy">© 2026 Consumer Focus UK · All rights reserved</div>
+    </div>
+  </footer>
+</section>
+
+</main>
+
+<!-- STICKY BAR -->
+<div class="sticky" id="sticky">
+  <div class="sbar">
+    <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b6cb8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg></div>
+    <div class="si"><b>🏆 Orivelle · #1 Pick</b><span>Editor's Choice · 9.9/10 · 50% off today</span></div>
+    <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">See offer →</a>
+  </div>
+</div>
+
+<script>
+  // ===== IMAGES — paste image URLs (or base64 data URIs) here, one place =====
+  // product: Orivelle product shot (use the merchant's creative — you're cleared as the affiliate)
+  // apply:   application / lifestyle shot (your own or licensed stock)
+  var IMAGES = {
+    product: '',
+    apply: ''
+  };
+  Object.keys(IMAGES).forEach(function(key){
+    if(!IMAGES[key]) return;
+    document.querySelectorAll('[data-img="'+key+'"]').forEach(function(f){
+      f.classList.remove('ph');
+      f.innerHTML = '<img src="'+IMAGES[key]+'" alt="Orivelle nail fungus pen" loading="lazy">';
+    });
+  });
+
+  // Dynamic H1 routing — matches the ?h1= ad-group parameter
+  (function(){
+    var map={
+      best:'I tested the most-bought nail fungus pens of 2026 — <em>one clearly stood out</em>',
+      pen:'The best nail fungus pen in the UK for 2026 — <em>one clearly came out on top</em>',
+      finger:'The best fingernail &amp; toenail fungus pen of 2026 — <em>tested &amp; ranked</em>',
+      symptom:'Yellow or thick nails? I tested 2026\u2019s top nail pens — <em>one stood out</em>'
+    };
+    try{
+      var k=new URLSearchParams(location.search).get('h1');
+      if(k&&map[k]){document.getElementById('hero-h1').innerHTML=map[k];}
+    }catch(e){}
+  })();
+
+  // Sticky bar: show after scrolling past the hero
+  (function(){
+    var bar=document.getElementById('sticky');
+    function onScroll(){
+      if(window.scrollY>620){bar.classList.add('show');}else{bar.classList.remove('show');}
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  })();
+</script>
+
+</body>
+</html>
