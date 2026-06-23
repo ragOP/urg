@@ -24,6 +24,7 @@
 <title>Best Nail Fungus Pens UK 2026 — Independent Comparison | Consumer Focus UK</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="images/heroo.webp" fetchpriority="high">
 <script type="text/javascript" src="https://trk.selectgood.online/track.js?rtkcmpid=6a3a5c15b1a3e7cd5e1aa176"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -306,7 +307,7 @@
     </figure>
 
     <div class="byline">
-      <div class="avatar"><img src="images/person.png" alt="Emma Caldwell"></div>
+      <div class="avatar"><img src="images/person.webp" alt="Emma Caldwell"></div>
       <div class="who"><b>Emma Caldwell</b><span>Senior Editor · Consumer Focus UK</span></div>
       <div class="stars">★★★★★</div>
     </div>
@@ -374,7 +375,7 @@
       <span class="ribbon">🏆 #1 · Editor's Choice</span>
       <div class="chead">
         <div class="picon">
-          <img src="images/abc.png" alt="Orivelle Nail Fungus Pen">
+          <img src="images/abc.webp" alt="Orivelle Nail Fungus Pen" width="62" height="62" loading="lazy" decoding="async">
         </div>
         <div class="pn"><b>Orivelle Nail Fungus Pen</b><span class="winlabel">Editor's Choice</span></div>
         <div class="scorebadge"><div class="sv">9.9</div><div class="sl">Excellent</div></div>
@@ -520,7 +521,7 @@
     <p>A fair question. What surprised me most: the majority simply didn't contain the botanicals the label promised — barely-there blends, missing ingredients, formulas you'd struggle to tell apart from water.</p>
     <p>And if you ask me personally which pen I'd reach for tomorrow morning? <strong>Orivelle.</strong> Without hesitation. It's the cleanest formula in the comparison, the most thought-through blend, and the only one currently available at a price most readers can actually justify.</p>
     <div class="byline" style="margin-top:18px">
-      <div class="avatar"><img src="images/person.png" alt="Emma Caldwell"></div>
+      <div class="avatar"><img src="images/person.webp" alt="Emma Caldwell"></div>
       <div class="who"><b>Emma Caldwell</b><span>Senior Editor · Consumer Focus UK</span></div>
     </div>
   </div>
@@ -533,7 +534,7 @@
     <h2>Why the Orivelle pen takes #1</h2>
 
     <div class="deep-head" style="margin-top:18px">
-      <div class="picon"><img src="images/abc.png" alt="Orivelle Nail Fungus Pen"></div>
+      <div class="picon"><img src="images/abc.webp" alt="Orivelle Nail Fungus Pen" width="62" height="62" loading="lazy" decoding="async"></div>
       <div><b style="color:var(--ink);font-size:1.05rem">Orivelle Nail Fungus Pen</b><br><span style="font-size:.82rem;color:var(--muted)">#1 · Editor's Choice</span></div>
       <div class="sv"><b>9.9</b><br><span>/10</span></div>
     </div>
@@ -618,7 +619,7 @@
 <!-- AUTHOR BIO -->
 <section>
   <div class="wrap bio">
-    <div class="avatar"><img src="images/person.png" alt="Emma Caldwell"></div>
+    <div class="avatar"><img src="images/person.webp" alt="Emma Caldwell"></div>
     <b>Emma Caldwell</b>
     <div class="role">Senior Editor · Consumer Focus UK</div>
     <p>Emma has spent over eight years testing health and wellness products, focused on everyday real-world usefulness rather than marketing promises. Her aim is to simplify the buying decision — cutting through the noise to find the products that genuinely hold up in daily life.</p>
@@ -662,7 +663,7 @@
 <!-- STICKY BAR -->
 <div class="sticky" id="sticky">
   <div class="sbar">
-    <div class="picon"><img src="images/abc.png" alt="Orivelle Nail Fungus Pen"></div>
+    <div class="picon"><img src="images/abc.webp" alt="Orivelle Nail Fungus Pen" width="40" height="40" loading="lazy" decoding="async"></div>
     <div class="si"><b>🏆 Orivelle · #1 Pick</b><span>Editor's Choice · 9.9/10 · 50% off today</span></div>
     <a class="cta" href="https://trk.selectgood.online/click" rel="nofollow sponsored">See offer →</a>
   </div>
@@ -673,14 +674,18 @@
   // hero:    hero section image
   // product: Orivelle product shot (use the merchant's creative — you're cleared as the affiliate)
   var IMAGES = {
-    hero: 'images/heroo.png',
-    product: 'images/abc.png'
+    hero: 'images/heroo.webp',
+    product: 'images/abc.webp'
   };
   Object.keys(IMAGES).forEach(function(key){
     if(!IMAGES[key]) return;
+    var lazy = key !== 'hero';
+    var attrs = lazy
+      ? ' loading="lazy" decoding="async"'
+      : ' fetchpriority="high" decoding="async" width="800" height="450"';
     document.querySelectorAll('[data-img="'+key+'"]').forEach(function(f){
       f.classList.remove('ph');
-      f.innerHTML = '<img src="'+IMAGES[key]+'" alt="Orivelle nail fungus pen" loading="lazy">';
+      f.innerHTML = '<img src="'+IMAGES[key]+'" alt="Orivelle nail fungus pen"'+attrs+'>';
     });
   });
 
