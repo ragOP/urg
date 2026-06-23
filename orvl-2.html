@@ -259,6 +259,8 @@
   /* image slots */
   .figslot{margin:20px 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--blue-tint);box-shadow:var(--shadow)}
   .figslot img,.figslot video{display:block;width:100%;height:auto}
+  .figslot.media-round{border-radius:22px;overflow:hidden;max-width:340px;margin-left:auto;margin-right:auto}
+  .figslot.media-round video{pointer-events:none}
   .figslot.ph{display:grid;place-items:center;min-height:190px}
   .figslot .phin{text-align:center;padding:26px}
   .figslot .phin .ico{font-size:1.9rem}
@@ -297,7 +299,7 @@
     </figure>
 
     <div class="byline">
-      <div class="avatar">EC</div>
+      <div class="avatar"><img src="images/person.png" alt="Emma Caldwell"></div>
       <div class="who"><b>Emma Caldwell</b><span>Senior Editor · Consumer Focus UK</span></div>
       <div class="stars">★★★★★</div>
     </div>
@@ -361,11 +363,11 @@
     <p class="sub">As of June 2026 · ranked by overall score</p>
 
     <!-- WINNER -->
-    <div class="card win">
+    <div class="card win" id="first-product">
       <span class="ribbon">🏆 #1 · Editor's Choice</span>
       <div class="chead">
         <div class="picon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#0b6cb8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg>
+          <img src="images/abc.png" alt="Orivelle Nail Fungus Pen">
         </div>
         <div class="pn"><b>Orivelle Nail Fungus Pen</b><span class="winlabel">Editor's Choice</span></div>
         <div class="scorebadge"><div class="sv">9.9</div><div class="sl">Excellent</div></div>
@@ -405,8 +407,7 @@
         <ul><li>High demand — stock through the official shop is currently limited.</li></ul>
       </div>
 
-      <a class="cta" href="https://trk.selectgood.online/click
-" rel="nofollow sponsored">See the #1 pick &amp; today's price →</a>
+      <a class="cta" href="https://trk.selectgood.online/click" rel="nofollow sponsored">See the #1 pick &amp; today's price →</a>
       <p class="ordered">🔥 Ordered <b>847×</b> this week</p>
       <div class="trust"><span>✓ 30-day guarantee</span><span>🔒 Secure checkout</span><span>🚚 Fast UK delivery</span></div>
     </div>
@@ -415,8 +416,7 @@
     <div class="card">
       <span class="rank">#2</span>
       <div class="chead">
-        <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="#5d6b7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg></div>
-        <div class="pn"><b>NailClear Pro</b><span style="font-size:.84rem;color:var(--muted)">Single-oil formula</span></div>
+        <div class="picon"><img src="https://bestbuyguide.org/wp-content/uploads/2025/11/funguspentop2-1.png" alt="NailClear Pro"></div><span style="font-size:.84rem;color:var(--muted)">Single-oil formula</span></div>
         <div class="scorebadge"><div class="sv">9.0</div><div class="sl">Good</div></div>
       </div>
       <div class="pricerow"><span class="price-now">£29.99</span></div>
@@ -440,8 +440,7 @@
     <div class="card">
       <span class="rank">#3</span>
       <div class="chead">
-        <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="#5d6b7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg></div>
-        <div class="pn"><b>FungiShield Pen</b><span style="font-size:.84rem;color:var(--muted)">Budget option</span></div>
+        <div class="picon"><img src="https://bestbuyguide.org/wp-content/uploads/2025/11/funguspenuktop3.jpg" alt="FungiShield Pen"></div><span style="font-size:.84rem;color:var(--muted)">Budget option</span></div>
         <div class="scorebadge"><div class="sv">8.5</div><div class="sl">Good</div></div>
       </div>
       <div class="pricerow"><span class="price-now">£24.99</span></div>
@@ -484,8 +483,7 @@
       </table>
     </div>
     <p class="tnote">Based on publicly available information (as of June 2026). Product details may change.</p>
-    <a class="cta" href="https://trk.selectgood.online/click
-" rel="nofollow sponsored">See the winner →</a>
+    <a class="cta" href="https://trk.selectgood.online/click" rel="nofollow sponsored">See the winner →</a>
   </div>
 </section>
 
@@ -513,7 +511,7 @@
     <p>A fair question. What surprised me most: the majority simply didn't contain the botanicals the label promised — barely-there blends, missing ingredients, formulas you'd struggle to tell apart from water.</p>
     <p>And if you ask me personally which pen I'd reach for tomorrow morning? <strong>Orivelle.</strong> Without hesitation. It's the cleanest formula in the comparison, the most thought-through blend, and the only one currently available at a price most readers can actually justify.</p>
     <div class="byline" style="margin-top:18px">
-      <div class="avatar">EC</div>
+      <div class="avatar"><img src="images/person.png" alt="Emma Caldwell"></div>
       <div class="who"><b>Emma Caldwell</b><span>Senior Editor · Consumer Focus UK</span></div>
     </div>
   </div>
@@ -526,18 +524,18 @@
     <h2>Why the Orivelle pen takes #1</h2>
 
     <div class="deep-head" style="margin-top:18px">
-      <div class="picon"><img src="https://bestbuyguide.org/wp-content/uploads/2025/11/funguspentop2-1.png" alt="Orivelle Nail Fungus Pen"></div>
+      <div class="picon"><img src="images/abc.png" alt="Orivelle Nail Fungus Pen"></div>
       <div><b style="color:var(--ink);font-size:1.05rem">Orivelle Nail Fungus Pen</b><br><span style="font-size:.82rem;color:var(--muted)">#1 · Editor's Choice</span></div>
       <div class="sv"><b>9.9</b><br><span>/10</span></div>
     </div>
 
     <p>Across the most-searched nail fungus pens, the <strong>Orivelle pen</strong> came out ahead in every category that counts. The slim brush-tip applicator places the solution exactly where creams and drops can't reach — along the nail edges, into the cuticle and around the nail bed.</p>
 
-    <figure class="figslot">
-      <video src="https://bestbuyguide.org/wp-content/uploads/2025/11/funfuspenukvideo2.mp4" controls playsinline muted loop autoplay></video>
+    <figure class="figslot media-round">
+      <video src="https://bestbuyguide.org/wp-content/uploads/2025/11/funfuspenukvideo2.mp4" playsinline muted loop autoplay></video>
     </figure>
-    <figure class="figslot">
-      <video src="https://bestbuyguide.org/wp-content/uploads/2025/11/funguspenukvideo1.mp4" controls playsinline muted loop autoplay></video>
+    <figure class="figslot media-round">
+      <video src="https://bestbuyguide.org/wp-content/uploads/2025/11/funguspenukvideo1.mp4" playsinline muted loop autoplay></video>
     </figure>
 
     <h3 style="margin:20px 0 8px">A considered 17-ingredient botanical blend</h3>
@@ -558,8 +556,7 @@
       <span class="chip">⚡ Discreet &amp; portable</span>
     </div>
 
-    <a class="cta" href="https://trk.selectgood.online/click
-" rel="nofollow sponsored">Go to the official shop →</a>
+    <a class="cta" href="https://trk.selectgood.online/click" rel="nofollow sponsored">Go to the official shop →</a>
       <p class="ordered">🔥 Ordered <b>847×</b> this week · £19.95 instead of £39.90</p>
     <div class="trust"><span>✓ 30-day money-back</span><span>🔒 Secure checkout</span><span>🚚 Fast delivery</span></div>
   </div>
@@ -630,8 +627,7 @@
         <span class="price-old">£39.90</span>
         <span class="disc">−50%</span>
       </div>
-      <a class="cta" href="https://trk.selectgood.online/click
-" rel="nofollow sponsored">Go to the offer →</a>
+      <a class="cta" href="https://trk.selectgood.online/click" rel="nofollow sponsored">Go to the offer →</a>
       <p class="ordered" style="color:#cfe4f5">🔥 Ordered <b style="color:#fff">847×</b> this week</p>
       <div class="trust"><span>✓ 30-day guarantee</span><span>🔒 Secure checkout</span><span>🚚 Fast UK delivery</span></div>
     </div>
@@ -653,10 +649,9 @@
 <!-- STICKY BAR -->
 <div class="sticky" id="sticky">
   <div class="sbar">
-    <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b6cb8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg></div>
+    <div class="picon"><img src="images/abc.png" alt="Orivelle Nail Fungus Pen"></div>
     <div class="si"><b>🏆 Orivelle · #1 Pick</b><span>Editor's Choice · 9.9/10 · 50% off today</span></div>
-    <a class="cta" href="https://trk.selectgood.online/click
-" rel="nofollow sponsored">See offer →</a>
+    <a class="cta" href="https://trk.selectgood.online/click" rel="nofollow sponsored">See offer →</a>
   </div>
 </div>
 
@@ -690,11 +685,17 @@
     }catch(e){}
   })();
 
-  // Sticky bar: show after scrolling past the hero
+  // Sticky bar: show once user scrolls to the first product in Top 3
   (function(){
     var bar=document.getElementById('sticky');
+    var target=document.getElementById('first-product');
+    if(!bar||!target) return;
     function onScroll(){
-      if(window.scrollY>620){bar.classList.add('show');}else{bar.classList.remove('show');}
+      if(target.getBoundingClientRect().top<window.innerHeight*0.9){
+        bar.classList.add('show');
+      }else{
+        bar.classList.remove('show');
+      }
     }
     window.addEventListener('scroll',onScroll,{passive:true});onScroll();
   })();
