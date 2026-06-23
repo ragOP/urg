@@ -5,7 +5,8 @@
   Template: Consumer Focus UK (matches verbraucherfokus-test.de design system)
 
   >>> BEFORE LAUNCH — replace the affiliate link in ONE place:
-      Find:  REPLACE_WITH_YOUR_AFFILIATE_LINK
+      Find:  https://trk.selectgood.online/click
+
       (used on every CTA button)
 
   >>> DYNAMIC H1 ROUTING (matches your URL-param architecture):
@@ -23,6 +24,7 @@
 <title>Best Nail Fungus Pens UK 2026 — Independent Comparison | Consumer Focus UK</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="text/javascript" src="https://trk.selectgood.online/track.js?rtkcmpid=6a3a5c15b1a3e7cd5e1aa176"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -75,7 +77,8 @@
 
   /* byline */
   .byline{display:flex;align-items:center;gap:12px;margin-top:22px;padding:13px 15px;background:var(--card);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow)}
-  .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#5a86b8,#0b6cb8);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.92rem;flex:none}
+  .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#5a86b8,#0b6cb8);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.92rem;flex:none;overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
   .byline .who{line-height:1.25}
   .byline .who b{font-size:.95rem;color:var(--ink)}
   .byline .who span{font-size:.78rem;color:var(--muted);display:block}
@@ -117,6 +120,7 @@
   .chead{display:flex;align-items:center;gap:14px;margin-top:8px}
   .picon{width:62px;height:62px;border-radius:13px;background:var(--blue-tint);display:grid;place-items:center;flex:none;border:1px solid var(--blue-tint2)}
   .picon svg{width:34px;height:34px}
+  .picon img{width:100%;height:100%;object-fit:cover;border-radius:12px}
   .chead .pn{flex:1;min-width:0}
   .chead .pn b{font-size:1.16rem;color:var(--ink);font-weight:700;display:block;line-height:1.2}
   .scorebadge{text-align:center;flex:none}
@@ -231,6 +235,7 @@
   .final .price-now{color:#fff}.final .price-old{color:#bcd6ec}
   .final .cta{background:#fff;color:var(--blue-dark);box-shadow:0 6px 18px rgba(0,0,0,.2)}
   .final .trust{color:#cfe4f5}
+  .final .figslot{margin:0 auto 18px;max-width:220px;border:none;background:#fff}
 
   /* disclaimer + footer */
   .disc{font-size:.8rem;color:var(--muted);line-height:1.6;margin-top:26px}
@@ -253,7 +258,7 @@
 
   /* image slots */
   .figslot{margin:20px 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--blue-tint);box-shadow:var(--shadow)}
-  .figslot img{display:block;width:100%;height:auto}
+  .figslot img,.figslot video{display:block;width:100%;height:auto}
   .figslot.ph{display:grid;place-items:center;min-height:190px}
   .figslot .phin{text-align:center;padding:26px}
   .figslot .phin .ico{font-size:1.9rem}
@@ -400,7 +405,8 @@
         <ul><li>High demand — stock through the official shop is currently limited.</li></ul>
       </div>
 
-      <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">See the #1 pick &amp; today's price →</a>
+      <a class="cta" href="https://trk.selectgood.online/click
+" rel="nofollow sponsored">See the #1 pick &amp; today's price →</a>
       <p class="ordered">🔥 Ordered <b>847×</b> this week</p>
       <div class="trust"><span>✓ 30-day guarantee</span><span>🔒 Secure checkout</span><span>🚚 Fast UK delivery</span></div>
     </div>
@@ -478,7 +484,8 @@
       </table>
     </div>
     <p class="tnote">Based on publicly available information (as of June 2026). Product details may change.</p>
-    <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">See the winner →</a>
+    <a class="cta" href="https://trk.selectgood.online/click
+" rel="nofollow sponsored">See the winner →</a>
   </div>
 </section>
 
@@ -519,15 +526,18 @@
     <h2>Why the Orivelle pen takes #1</h2>
 
     <div class="deep-head" style="margin-top:18px">
-      <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b6cb8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg></div>
+      <div class="picon"><img src="https://bestbuyguide.org/wp-content/uploads/2025/11/funguspentop2-1.png" alt="Orivelle Nail Fungus Pen"></div>
       <div><b style="color:var(--ink);font-size:1.05rem">Orivelle Nail Fungus Pen</b><br><span style="font-size:.82rem;color:var(--muted)">#1 · Editor's Choice</span></div>
       <div class="sv"><b>9.9</b><br><span>/10</span></div>
     </div>
 
     <p>Across the most-searched nail fungus pens, the <strong>Orivelle pen</strong> came out ahead in every category that counts. The slim brush-tip applicator places the solution exactly where creams and drops can't reach — along the nail edges, into the cuticle and around the nail bed.</p>
 
-    <figure class="figslot ph" data-img="apply">
-      <div class="phin"><div class="ico">🖼️</div><b>Application / lifestyle image</b><span>add URL to IMAGES.apply — use your own or licensed stock</span></div>
+    <figure class="figslot">
+      <video src="https://bestbuyguide.org/wp-content/uploads/2025/11/funfuspenukvideo2.mp4" controls playsinline muted loop autoplay></video>
+    </figure>
+    <figure class="figslot">
+      <video src="https://bestbuyguide.org/wp-content/uploads/2025/11/funguspenukvideo1.mp4" controls playsinline muted loop autoplay></video>
     </figure>
 
     <h3 style="margin:20px 0 8px">A considered 17-ingredient botanical blend</h3>
@@ -548,7 +558,8 @@
       <span class="chip">⚡ Discreet &amp; portable</span>
     </div>
 
-    <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">Go to the official shop →</a>
+    <a class="cta" href="https://trk.selectgood.online/click
+" rel="nofollow sponsored">Go to the official shop →</a>
       <p class="ordered">🔥 Ordered <b>847×</b> this week · £19.95 instead of £39.90</p>
     <div class="trust"><span>✓ 30-day money-back</span><span>🔒 Secure checkout</span><span>🚚 Fast delivery</span></div>
   </div>
@@ -597,7 +608,7 @@
 <!-- AUTHOR BIO -->
 <section>
   <div class="wrap bio">
-    <div class="avatar">EC</div>
+    <div class="avatar"><img src="images/person.png" alt="Emma Caldwell"></div>
     <b>Emma Caldwell</b>
     <div class="role">Senior Editor · Consumer Focus UK</div>
     <p>Emma has spent over eight years testing health and wellness products, focused on everyday real-world usefulness rather than marketing promises. Her aim is to simplify the buying decision — cutting through the noise to find the products that genuinely hold up in daily life.</p>
@@ -608,6 +619,9 @@
 <section>
   <div class="wrap">
     <div class="final">
+      <figure class="figslot ph" data-img="product">
+        <div class="phin"><div class="ico">🖼️</div><b>Orivelle product image</b><span>add URL to IMAGES.product</span></div>
+      </figure>
       <div class="ff">🏆 Don't miss this offer</div>
       <h3>Orivelle Nail Fungus Pen</h3>
       <div class="ts">★★★★★ · 9.9/10</div>
@@ -616,7 +630,8 @@
         <span class="price-old">£39.90</span>
         <span class="disc">−50%</span>
       </div>
-      <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">Go to the offer →</a>
+      <a class="cta" href="https://trk.selectgood.online/click
+" rel="nofollow sponsored">Go to the offer →</a>
       <p class="ordered" style="color:#cfe4f5">🔥 Ordered <b style="color:#fff">847×</b> this week</p>
       <div class="trust"><span>✓ 30-day guarantee</span><span>🔒 Secure checkout</span><span>🚚 Fast UK delivery</span></div>
     </div>
@@ -640,7 +655,8 @@
   <div class="sbar">
     <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b6cb8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18z"/><path d="M14 6l3 3"/><path d="M17 3l4 4"/></svg></div>
     <div class="si"><b>🏆 Orivelle · #1 Pick</b><span>Editor's Choice · 9.9/10 · 50% off today</span></div>
-    <a class="cta" href="REPLACE_WITH_YOUR_AFFILIATE_LINK" rel="nofollow sponsored">See offer →</a>
+    <a class="cta" href="https://trk.selectgood.online/click
+" rel="nofollow sponsored">See offer →</a>
   </div>
 </div>
 
@@ -648,11 +664,9 @@
   // ===== IMAGES — paste image URLs (or base64 data URIs) here, one place =====
   // hero:    hero section image
   // product: Orivelle product shot (use the merchant's creative — you're cleared as the affiliate)
-  // apply:   application / lifestyle shot (your own or licensed stock)
   var IMAGES = {
     hero: 'images/heroo.png',
-    product: 'images/abc.png',
-    apply: 'https://bestbuyguide.org/wp-content/uploads/2025/10/orivelle1.png'
+    product: 'images/abc.png'
   };
   Object.keys(IMAGES).forEach(function(key){
     if(!IMAGES[key]) return;
