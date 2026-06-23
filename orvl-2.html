@@ -284,11 +284,11 @@
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">2026 Comparison · Nail Fungus Pens</span>
-    <h1 id="hero-h1">I tested 50 nail fungus pens. Only 3 actually work — <em>here's the winner.</em></h1>
+    <h1 id="hero-h1">We tested 50 nail fungus pens. Only 3 actually work — <em>here's the winner.</em></h1>
     <p class="lead">Over the past two months I put more than 50 nail fungus pens sold across the UK through real, hands-on use. Only three delivered — and one left every other brand behind.</p>
 
-    <figure class="figslot ph hero-fig" data-img="product">
-      <div class="phin"><div class="ico">🖼️</div><b>Orivelle product image</b><span>add URL to IMAGES.product (bottom of file)</span></div>
+    <figure class="figslot ph hero-fig" data-img="hero">
+      <div class="phin"><div class="ico">🖼️</div><b>Hero image</b><span>add URL to IMAGES.hero (bottom of file)</span></div>
     </figure>
 
     <div class="byline">
@@ -646,10 +646,12 @@
 
 <script>
   // ===== IMAGES — paste image URLs (or base64 data URIs) here, one place =====
+  // hero:    hero section image
   // product: Orivelle product shot (use the merchant's creative — you're cleared as the affiliate)
   // apply:   application / lifestyle shot (your own or licensed stock)
   var IMAGES = {
-    product: 'https://bestbuyguide.org/wp-content/uploads/2025/10/pic1.jpg',
+    hero: 'images/heroo.png',
+    product: 'images/abc.png',
     apply: 'https://bestbuyguide.org/wp-content/uploads/2025/10/orivelle1.png'
   };
   Object.keys(IMAGES).forEach(function(key){
@@ -663,9 +665,9 @@
   // Dynamic H1 routing — matches the ?h1= ad-group parameter
   (function(){
     var map={
-      best:'I tested 50 nail fungus pens. Only 3 actually work \u2014 <em>here\'s the winner.</em>',
+      best:'We tested 50 nail fungus pens. Only 3 actually work \u2014 <em>here\'s the winner.</em>',
       pen:'The best nail fungus pen of 2026 \u2014 <em>50 tested, one clear winner.</em>',
-      finger:'Yellow, thick or brittle nails? I tested 50 pens \u2014 <em>this one actually works.</em>',
+      finger:'Yellow, thick or brittle nails? We tested 50 pens \u2014 <em>this one actually works.</em>',
       symptom:'Thick toenails? Yellow nails? Here\'s the only pen that made a real difference.'
     };
     try{
