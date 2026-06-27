@@ -19,6 +19,7 @@
   --green:       #1a8a4a;
   --green-light: #edf7f2;
   --gold:        #f0a500;
+  --yellow-light:#fef3c7;
   --red:         #c0392b;
   --text:        #2c2c2c;
   --muted:       #6b7280;
@@ -144,6 +145,11 @@ h1 em {
   max-width: 620px;
   margin-bottom: 28px;
   line-height: 1.7;
+}
+.lead-highlight {
+  background: linear-gradient(transparent 55%, var(--yellow-light) 55%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* ─── BYLINE ─── */
@@ -805,6 +811,61 @@ footer {
   line-height: 1.65;
 }
 
+/* ─── STICKY FOOTER BAR ─── */
+.sticky-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 200;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -3px 14px rgba(16,40,70,.08);
+  transform: translateY(110%);
+  transition: transform 0.3s ease;
+}
+.sticky-bar.show { transform: translateY(0); }
+.sticky-bar-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 16px;
+}
+.sticky-bar-img {
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+.sticky-bar-img img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+}
+.sticky-bar-info {
+  flex: 1; min-width: 0;
+  line-height: 1.2;
+}
+.sticky-bar-info b {
+  font-size: 13px; color: #0f172a;
+  display: block;
+}
+.sticky-bar-info span {
+  font-size: 12px; color: var(--muted);
+}
+.sticky-bar-cta {
+  width: auto;
+  margin: 0;
+  padding: 11px 18px;
+  font-size: 14px;
+  white-space: nowrap;
+  flex: none;
+}
+@media (max-width: 480px) {
+  .sticky-bar-info span { display: none; }
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 600px) {
   header {
@@ -873,7 +934,7 @@ footer {
 
   <h1 id="page-h1">We tested the most popular snap-on veneers of 2026, <em>one clearly stood out!</em></h1>
 
-  <p class="lead">Over the last six months, we reviewed more than 20 custom snap-on veneer brands sold in the US. Only a handful genuinely delivered — and one stood clearly above the rest.</p>
+  <p class="lead">Over the last six months, we reviewed more than <span class="lead-highlight">20 custom snap-on veneer brands</span> sold in the US. Only a handful genuinely delivered — and one stood clearly above the rest.</p>
 
   <div class="byline">
     <div class="avatar"><img src="images/person.webp" alt="Sarah Jenkins" width="40" height="40"></div>
@@ -1266,6 +1327,15 @@ footer {
   <p class="footer-disc">Better Product Choice is an independent consumer review publication. We may receive a commission if you purchase through links on this page, which helps fund our independent testing process. This does not influence our editorial ratings or recommendations. Individual results may vary. This site is not affiliated with any dental practice, healthcare provider, or government body.</p>
 </footer>
 
+<!-- STICKY FOOTER BAR -->
+<div class="sticky-bar" id="sticky-bar">
+  <div class="sticky-bar-inner">
+    <div class="sticky-bar-img"><img src="b.png" alt="Shiny Smile Veneers" width="40" height="40"></div>
+    <div class="sticky-bar-info"><b>🏆 Shiny Smile · #1 Pick</b><span>Editor's Choice · 9.9/10 · Currently Available</span></div>
+    <a href="REPLACE_WITH_YOUR_AFFILIATE_LINK" class="btn-green sticky-bar-cta" rel="nofollow sponsored">See offer →</a>
+  </div>
+</div>
+
 <script>
 // ── Dynamic H1 ──
 const H1 = {
@@ -1296,6 +1366,18 @@ const H1 = {
   }
   window.addEventListener('scroll', updateStickyHeader, { passive: true });
   updateStickyHeader();
+})();
+
+// ── Sticky footer bar (shows at product #1) ──
+(function () {
+  const bar = document.getElementById('sticky-bar');
+  const product1 = document.getElementById('product-1');
+  if (!bar || !product1) return;
+  function updateStickyBar() {
+    bar.classList.toggle('show', product1.getBoundingClientRect().top < window.innerHeight * 0.9);
+  }
+  window.addEventListener('scroll', updateStickyBar, { passive: true });
+  updateStickyBar();
 })();
 
 // ── FAQ ──
