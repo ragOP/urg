@@ -394,6 +394,12 @@ h1 em {
   flex-wrap: wrap; margin-bottom: 8px;
 }
 .price-main { font-size: 20px; font-weight: 800; color: #111; }
+.price-highlight,
+.rating-highlight {
+  background: linear-gradient(transparent 55%, var(--green-light) 55%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
 .price-note { font-size: 13px; color: var(--muted); }
 .avail-tag {
   font-size: 12px; font-weight: 600; color: var(--green);
@@ -423,6 +429,13 @@ h1 em {
 }
 .pc-col-head.pros { color: var(--green); border-right: 1px solid var(--border); }
 .pc-col-head.cons { color: #d97706; }
+.pc-col > .pc-col-head {
+  margin: -14px -16px 4px;
+  padding: 10px 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.pc-col > .pc-col-head.cons { border-right: none; }
 .pc-table-body {
   display: grid; grid-template-columns: 1fr 1fr;
 }
@@ -624,6 +637,19 @@ h1 em {
 .chip-info { text-align: left; }
 .chip-brand { font-size: 14px; font-weight: 700; color: #fff; }
 .chip-stars { color: var(--gold); font-size: 14px; margin-top: 2px; }
+.final-product-img {
+  width: 132px; height: 132px;
+  margin: 0 auto 24px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.final-product-img img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+}
 
 /* ─── FAQ ─── */
 .faq-section {
@@ -681,6 +707,42 @@ footer {
 }
 .footer-links a { font-size: 13px; color: var(--muted); }
 .footer-links a:hover { color: var(--blue-mid); }
+.footer-winner {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 18px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.footer-winner-img {
+  width: 64px; height: 64px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.footer-winner-img img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+}
+.footer-winner-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 3px;
+}
+.footer-winner-name {
+  font-size: 15px; font-weight: 800;
+  color: var(--blue); line-height: 1.2;
+}
+.footer-winner-score {
+  font-size: 12px; color: var(--muted); margin-top: 2px;
+}
 .footer-copy { font-size: 12px; color: #aaa; margin-bottom: 10px; }
 .footer-disc {
   font-size: 12px; color: #bbb;
@@ -788,15 +850,15 @@ footer {
     <div class="summary-label">📋 Quick Summary of Our Results</div>
     <div class="summary-row">
       <span class="summary-rank">#1</span>
-      <p><strong>Shiny Smile Veneers (9.9/10):</strong> Most natural look, best durability (up to 5 years), and the strongest price-to-quality ratio in our test. The only brand with a 3-year warranty.</p>
+      <p><strong>Shiny Smile Veneers (<span class="rating-highlight">9.9/10</span>):</strong> Most natural look, best durability (up to 5 years), and the strongest price-to-quality ratio in our test. The only brand with a 3-year warranty.</p>
     </div>
     <div class="summary-row">
       <span class="summary-rank">#2</span>
-      <p><strong>InstaSmile (9.0/10):</strong> An established brand with a solid impression system and over 400,000 customers. Performs well, but noticeably more expensive and with longer production times.</p>
+      <p><strong>InstaSmile (<span class="rating-highlight">9.0/10</span>):</strong> An established brand with a solid impression system and over 400,000 customers. Performs well, but noticeably more expensive and with longer production times.</p>
     </div>
     <div class="summary-row">
       <span class="summary-rank">#3</span>
-      <p><strong>Pop On Veneers (8.5/10):</strong> A legitimate option made in New York. Good customer support, but the most expensive entry price of the three and only a 30-day warranty.</p>
+      <p><strong>Pop On Veneers (<span class="rating-highlight">8.5/10</span>):</strong> A legitimate option made in New York. Good customer support, but the most expensive entry price of the three and only a 30-day warranty.</p>
     </div>
   </div>
 </div>
@@ -843,27 +905,27 @@ footer {
       <span class="badge">TOP PICK</span>
     </div>
     <div class="card-overview">
-      <div class="card-img">😁</div>
+      <div class="card-img"><img src="a.png" alt="Shiny Smile Veneers"></div>
       <div class="card-meta">
         <div class="card-brand">Shiny Smile Veneers</div>
         <div class="score-row">
-          <span class="score-big">9.9</span>
+          <span class="score-big rating-highlight">9.9</span>
           <span class="score-out">/10</span>
           <span class="score-tag">Excellent</span>
         </div>
         <div class="stars">★★★★★</div>
         <div class="price-row">
-          <span class="price-main">From $370</span>
-          <span class="price-note">Single Arch &nbsp;|&nbsp; Full Set $570</span>
+          <span class="price-main price-highlight">From $370</span>
+          <span class="price-note">Single Arch</span>
+          <span class="verified-badge">Full Set $570</span>
         </div>
-        <div class="avail-tag"><span class="avail-dot"></span> Currently Available &nbsp;·&nbsp; Direct Online Order</div>
+        <div class="avail-tag"><span class="avail-dot"></span> Currently Available </div>
       </div>
     </div>
 
     <div class="pc-table">
       <div class="pc-table-head">
         <div class="pc-col-head pros">Benefits</div>
-        <div class="pc-col-head cons">Things to Note</div>
       </div>
       <div class="pc-table-body">
         <div class="pc-col pros">
@@ -875,6 +937,7 @@ footer {
           <div class="pc-item"><span class="pc-icon pro">✓</span><span><strong>HSA/FSA Eligible</strong> — Flexible payment plans and installment options available.</span></div>
         </div>
         <div class="pc-col cons">
+          <div class="pc-col-head cons">Things to Note</div>
           <div class="pc-item"><span class="pc-icon con">!</span><span>Only available online — not sold in retail stores.</span></div>
         </div>
       </div>
@@ -894,11 +957,11 @@ footer {
   <div class="card">
     <div class="card-header-runner">#2 &nbsp;·&nbsp; Runner-Up</div>
     <div class="card-overview">
-      <div class="card-img" style="background:linear-gradient(135deg,#f5f0ff,#ede0ff);">🦷</div>
+      <div class="card-img"><img src="b.png" alt="InstaSmile"></div>
       <div class="card-meta">
         <div class="card-brand">InstaSmile</div>
         <div class="score-row">
-          <span class="score-big" style="font-size:26px;">9.0</span>
+          <span class="score-big rating-highlight" style="font-size:26px;">9.0</span>
           <span class="score-out">/10</span>
           <span class="score-tag">Good</span>
         </div>
@@ -913,7 +976,6 @@ footer {
     <div class="pc-table">
       <div class="pc-table-head">
         <div class="pc-col-head pros">Benefits</div>
-        <div class="pc-col-head cons">Drawbacks vs. #1</div>
       </div>
       <div class="pc-table-body">
         <div class="pc-col pros">
@@ -922,6 +984,7 @@ footer {
           <div class="pc-item"><span class="pc-icon pro">✓</span><span><strong>Flexible Financing</strong> — Multiple payment plan options for all credit types.</span></div>
         </div>
         <div class="pc-col cons">
+          <div class="pc-col-head cons">Drawbacks vs. #1</div>
           <div class="pc-item"><span class="pc-icon con">!</span><span>More expensive than Shiny Smile for a comparable full set.</span></div>
           <div class="pc-item"><span class="pc-icon con">!</span><span>Material feels slightly thicker in the mouth than our #1 pick.</span></div>
           <div class="pc-item"><span class="pc-icon con">!</span><span>Production is 21 days after impressions are approved — slower than the winner.</span></div>
@@ -934,11 +997,11 @@ footer {
   <div class="card">
     <div class="card-header-runner">#3 &nbsp;·&nbsp; Third Place</div>
     <div class="card-overview">
-      <div class="card-img" style="background:linear-gradient(135deg,#f0fff4,#d0f0e0);">😬</div>
+      <div class="card-img"><img src="c.png" alt="Pop On Veneers"></div>
       <div class="card-meta">
         <div class="card-brand">Pop On Veneers</div>
         <div class="score-row">
-          <span class="score-big" style="font-size:26px;">8.5</span>
+          <span class="score-big rating-highlight" style="font-size:26px;">8.5</span>
           <span class="score-out">/10</span>
           <span class="score-tag">Good</span>
         </div>
@@ -953,7 +1016,6 @@ footer {
     <div class="pc-table">
       <div class="pc-table-head">
         <div class="pc-col-head pros">Benefits</div>
-        <div class="pc-col-head cons">Drawbacks vs. #1</div>
       </div>
       <div class="pc-table-body">
         <div class="pc-col pros">
@@ -962,6 +1024,7 @@ footer {
           <div class="pc-item"><span class="pc-icon pro">✓</span><span><strong>Rush Options Available</strong> — Faster turnaround available for an additional fee.</span></div>
         </div>
         <div class="pc-col cons">
+          <div class="pc-col-head cons">Drawbacks vs. #1</div>
           <div class="pc-item"><span class="pc-icon con">!</span><span>Highest entry price of the three — more expensive than both competitors.</span></div>
           <div class="pc-item"><span class="pc-icon con">!</span><span>Only a 30-day warranty vs. Shiny Smile's 3-year coverage.</span></div>
           <div class="pc-item"><span class="pc-icon con">!</span><span>Slightly less translucent material — can look less natural in bright lighting.</span></div>
@@ -1056,11 +1119,14 @@ footer {
 <div class="final-cta">
   <div class="final-cta-inner">
     <div class="final-eyebrow">Our Test Winner</div>
-    <h2>Shiny Smile Veneers — <em>9.9/10</em> in our comparison</h2>
+    <h2>Shiny Smile Veneers — <em class="rating-highlight">9.9/10</em> in our comparison</h2>
     <p class="final-cta-sub">Currently available with a 100% Satisfaction Guarantee and a 3-Year Warranty.</p>
+    <div class="final-product-img">
+      <img src="a.png" alt="Shiny Smile Veneers">
+    </div>
     <div style="display:flex;justify-content:center;margin-bottom:28px;">
       <div class="score-chip">
-        <span class="chip-score">9.9</span>
+        <span class="chip-score rating-highlight">9.9</span>
         <div class="chip-info">
           <div class="chip-brand">Shiny Smile Veneers</div>
           <div class="chip-stars">★★★★★</div>
@@ -1076,6 +1142,12 @@ footer {
   </div>
 </div>
 
+<div style="max-width:740px;margin:0 auto 48px;padding:0 24px;">
+      <div style="background:#f8fafc;border:1px solid #E2E8F0;border-radius:12px;padding:20px 24px;">
+        <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6b7280;margin-bottom:10px;">A note on our links</p>
+        <p style="font-size:14px;line-height:1.75;color:#444;margin:0;">We have received reports from readers of pricing discrepancies and delayed fulfilment from both InstaSmile and Pop On Veneers. Until we can independently verify a consistent experience, we are not linking to either. We take reader trust seriously — we would rather rank a product lower than send you somewhere we cannot vouch for.</p>
+      </div>
+    </div>
 <!-- FAQ -->
 <div class="faq-section">
   <h2 style="text-align:center;">Frequently Asked Questions</h2>
@@ -1113,6 +1185,16 @@ footer {
 
 <!-- FOOTER -->
 <footer>
+  <div class="footer-winner">
+    <div class="footer-winner-img">
+      <img src="a.png" alt="Shiny Smile Veneers">
+    </div>
+    <div>
+      <div class="footer-winner-label">Our Test Winner</div>
+      <div class="footer-winner-name">Shiny Smile Veneers</div>
+      <div class="footer-winner-score">Rated 9.9/10 in our independent comparison</div>
+    </div>
+  </div>
   <div class="footer-links">
     <a href="#">About Us</a>
     <a href="#">Privacy Policy</a>
