@@ -5,7 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Best Snap-On Veneers 2026 — Independent Comparison | Better Product Choice</title>
 <meta name="description" content="We tested 20+ snap-on veneer brands over 6 months. Our independent 2026 comparison reveals which custom clip-on veneers are actually worth buying.">
-<link rel="icon" href="https://www.verbraucherfokus-test.de/logo.png" type="image/png">
+<link rel="icon" href="https://www.verbraucherfokus-test.de/favicon.ico" sizes="48x48">
+<link rel="icon" href="https://www.verbraucherfokus-test.de/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.verbraucherfokus-test.de/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.verbraucherfokus-test.de/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://www.verbraucherfokus-test.de/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.verbraucherfokus-test.de/favicon-96x96.png">
+<link rel="apple-touch-icon" href="https://www.verbraucherfokus-test.de/apple-touch-icon.png" sizes="180x180">
+<meta name="msapplication-TileImage" content="https://www.verbraucherfokus-test.de/favicon-192x192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -1076,7 +1083,7 @@ footer {
   </div>
 
   <!-- ── CARD 2 ── -->
-  <div class="card">
+  <div class="card" id="product-2">
     <div class="card-header-runner">#2 &nbsp;·&nbsp; Runner-Up</div>
     <div class="card-overview">
       <div class="card-img"><img src="a.png" alt="InstaSmile"></div>
@@ -1368,13 +1375,13 @@ const H1 = {
   updateStickyHeader();
 })();
 
-// ── Sticky footer bar (shows at product #1) ──
+// ── Sticky footer bar (shows at InstaSmile card) ──
 (function () {
   const bar = document.getElementById('sticky-bar');
-  const product1 = document.getElementById('product-1');
-  if (!bar || !product1) return;
+  const instasmileCard = document.getElementById('product-2');
+  if (!bar || !instasmileCard) return;
   function updateStickyBar() {
-    bar.classList.toggle('show', product1.getBoundingClientRect().top < window.innerHeight * 0.9);
+    bar.classList.toggle('show', instasmileCard.getBoundingClientRect().top < window.innerHeight * 0.9);
   }
   window.addEventListener('scroll', updateStickyBar, { passive: true });
   updateStickyBar();
