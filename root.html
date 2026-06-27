@@ -621,8 +621,16 @@ h1 em {
   line-height: 1.25; margin-bottom: 10px;
 }
 .final-cta h2 em {
-  font-style: italic; color: #8ab4e8;
+  font-style: italic; color: #fff;
   font-family: 'Playfair Display', serif;
+}
+.final-cta .rating-highlight {
+  background: linear-gradient(transparent 58%, rgba(240,165,0,0.45) 58%);
+  color: var(--gold);
+}
+.final-cta .chip-score.rating-highlight {
+  color: var(--gold);
+  background: none;
 }
 .final-cta-sub { font-size: 15px; color: #8ab4e8; margin-bottom: 28px; }
 .score-chip {
@@ -738,10 +746,14 @@ footer {
 }
 .footer-winner-name {
   font-size: 15px; font-weight: 800;
-  color: var(--blue); line-height: 1.2;
+  color: #0f172a; line-height: 1.2;
 }
 .footer-winner-score {
-  font-size: 12px; color: var(--muted); margin-top: 2px;
+  font-size: 13px; color: #475569; margin-top: 4px;
+}
+.footer-winner-rating {
+  color: var(--green);
+  font-weight: 800;
 }
 .footer-copy { font-size: 12px; color: #aaa; margin-bottom: 10px; }
 .footer-disc {
@@ -1192,7 +1204,7 @@ footer {
     <div>
       <div class="footer-winner-label">Our Test Winner</div>
       <div class="footer-winner-name">Shiny Smile Veneers</div>
-      <div class="footer-winner-score">Rated 9.9/10 in our independent comparison</div>
+      <div class="footer-winner-score">Rated <span class="footer-winner-rating">9.9/10</span> in our independent comparison</div>
     </div>
   </div>
   <div class="footer-links">
