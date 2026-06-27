@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Best Snap-On Veneers 2026 — Independent Comparison | Better Product Choice</title>
 <meta name="description" content="We tested 20+ snap-on veneer brands over 6 months. Our independent 2026 comparison reveals which custom clip-on veneers are actually worth buying.">
+<link rel="icon" href="https://www.verbraucherfokus-test.de/logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -60,9 +61,13 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  position: sticky;
-  top: 0;
   z-index: 100;
+}
+header.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
 .logo {
@@ -494,6 +499,24 @@ h1 em {
   text-align: center;
   line-height: 1.4;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+.btn-green::after,
+.btn-cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: btn-shimmer 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes btn-shimmer {
+  0%   { left: -75%; }
+  100% { left: 125%; }
 }
 .btn-green:hover,
 .btn-cta:hover { background: #157a3f; }
@@ -603,9 +626,8 @@ h1 em {
   color: #0f172a; margin-bottom: 18px;
   line-height: 1.3;
 }
-.editor-box-body h2 em {
-  font-style: italic; color: var(--blue-mid);
-  font-family: 'Playfair Display', serif;
+.editor-box-body h2 span {
+  color: var(--blue-mid);
 }
 .editor-box-body p {
   font-size: 15px; line-height: 1.8;
@@ -938,7 +960,7 @@ footer {
   <p class="section-note">As of June 2026 &nbsp;·&nbsp; Sorted by overall rating</p>
 
   <!-- ── CARD 1 ── -->
-  <div class="card winner">
+  <div class="card winner" id="product-1">
     <div class="card-header-winner">
       🏆 &nbsp;#1 &nbsp;·&nbsp; Editor's Choice
       <span class="badge">TOP PICK</span>
@@ -1137,7 +1159,7 @@ footer {
   <div class="editor-box">
     <div class="editor-box-header">📝 &nbsp; Editor's Note</div>
     <div class="editor-box-body">
-      <h2>A word from our editor — <em>why only three?</em></h2>
+      <h2>A word from our editor — <span>why only three?</span></h2>
       <p>It is a fair question. The US market has dozens of snap-on veneer brands competing for attention, and we put more than 20 of them through our evaluation process over the past six months.</p>
       <p>What we found was that the majority of products on the market — particularly those sold through third-party marketplaces — are not custom-made at all. They use a boil-and-bite method, where you soften the material in hot water and press it against your teeth yourself. The result is a poor fit, a bulky appearance, and a product that typically lasts only a few weeks before cracking or warping.</p>
       <p>Among the custom-made brands, the differences came down to material quality and manufacturing precision. Several brands we tested used materials that were noticeably thicker than natural teeth, which created an unnatural look and made it difficult to speak clearly. Others had inconsistent shade matching or weak adhesion that made the veneers feel loose during normal wear.</p>
@@ -1262,6 +1284,18 @@ const H1 = {
   const k = new URLSearchParams(location.search).get('h1') || '';
   const el = document.getElementById('page-h1');
   if (el && H1[k.toLowerCase()]) el.innerHTML = H1[k.toLowerCase()];
+})();
+
+// ── Sticky header (activates at product #1) ──
+(function () {
+  const header = document.querySelector('header');
+  const product1 = document.getElementById('product-1');
+  if (!header || !product1) return;
+  function updateStickyHeader() {
+    header.classList.toggle('is-sticky', product1.getBoundingClientRect().top <= 0);
+  }
+  window.addEventListener('scroll', updateStickyHeader, { passive: true });
+  updateStickyHeader();
 })();
 
 // ── FAQ ──
