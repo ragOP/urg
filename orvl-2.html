@@ -21,6 +21,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0b6cb8">
+<link rel="icon" href="https://www.verbraucherfokus-test.de/favicon.ico" sizes="48x48">
+<link rel="icon" href="https://www.verbraucherfokus-test.de/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.verbraucherfokus-test.de/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.verbraucherfokus-test.de/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://www.verbraucherfokus-test.de/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.verbraucherfokus-test.de/favicon-96x96.png">
+<link rel="apple-touch-icon" href="https://www.verbraucherfokus-test.de/apple-touch-icon.png" sizes="180x180">
+<meta name="msapplication-TileImage" content="https://www.verbraucherfokus-test.de/favicon-192x192.png">
 <title>Best Nail Fungus Pens UK 2026 — Independent Comparison | Consumer Focus UK</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,24 +65,32 @@
   strong{color:var(--ink);font-weight:700}
   img{max-width:100%}
 
-  /* top strip */
-  .strip{background:var(--blue-darker);color:#dceaf7;font-size:.78rem;text-align:center;padding:7px 14px;font-weight:500;letter-spacing:.01em}
+  /* top strip + shimmer */
+  @keyframes shimmer{0%{left:-75%}100%{left:125%}}
+  .strip{position:relative;overflow:hidden;background:var(--blue-darker);color:#dceaf7;font-size:clamp(.62rem,2.6vw,.78rem);text-align:center;padding:7px 12px;font-weight:500;letter-spacing:.01em;white-space:nowrap}
+  .strip::after{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);animation:shimmer 3.2s ease-in-out infinite;pointer-events:none}
 
   /* header */
   header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .hbar{display:flex;align-items:center;gap:11px;max-width:var(--maxw);margin:0 auto;padding:11px 18px}
-  .logo{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;font-weight:800;display:grid;place-items:center;font-size:.92rem;letter-spacing:.02em;flex:none}
-  .brand{display:flex;flex-direction:column;line-height:1.15}
-  .brand b{color:var(--ink);font-size:.97rem;font-weight:700}
-  .brand span{color:var(--muted);font-size:.74rem}
-  .hbadge{margin-left:auto;font-size:.72rem;color:var(--green);background:var(--green-tint);padding:5px 10px;border-radius:20px;font-weight:600;white-space:nowrap}
+  .logo{display:flex;align-items:center;gap:10px;flex:1 1 auto;min-width:0}
+  .logo-mark{height:34px;width:auto;display:block;flex-shrink:0;object-fit:contain}
+  .logo-text{display:flex;flex-direction:column;justify-content:center;gap:1px;line-height:1.2}
+  .logo-name{font-size:15px;font-weight:700;color:var(--ink);line-height:1.2}
+  .logo-tagline{font-size:11px;color:var(--muted);line-height:1.2}
+  .hbadge{margin-left:auto;font-size:.72rem;color:var(--green);background:var(--green-tint);padding:5px 10px;border-radius:20px;font-weight:600;white-space:nowrap;flex-shrink:0}
 
-  .eyebrow{display:inline-block;background:var(--blue-tint);color:var(--blue-dark);font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:6px 12px;border-radius:20px;margin:0 0 16px}
+  .eyebrow{display:inline-block;background:var(--blue-tint);color:var(--blue-dark);font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:6px 12px;border-radius:20px;margin:0 0 14px;white-space:nowrap}
 
   section{padding:30px 0}
-  .hero{padding-top:30px}
+  .hero{padding:24px 0 20px}
   .hero h1{font-size:2.05rem;font-weight:800;letter-spacing:-.025em;margin-bottom:16px}
-  .hero .lead{font-size:1.12rem;color:var(--text)}
+  .hero .lead{font-size:1.12rem;color:var(--ink)}
+  .intro{padding:0 0 8px}
+  .intro p:last-child{margin-bottom:0}
+  .intro + section{padding-top:20px}
+  .intro p{color:var(--ink)}
+  .intro-cta{margin-top:16px;font-weight:600;color:var(--blue-dark)}
 
   /* byline */
   .byline{display:flex;align-items:center;gap:12px;margin-top:22px;padding:13px 15px;background:var(--card);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow)}
@@ -157,8 +173,9 @@
   .consbox li::before{content:"✕";position:absolute;left:0;top:4px;color:var(--red);font-weight:700;font-size:.85rem}
   .consbox.note li::before{content:"!";color:var(--gold);font-weight:800}
 
-  /* CTA */
-  .cta{display:block;text-align:center;background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;font-weight:700;font-size:1.08rem;padding:16px 22px;border-radius:13px;text-decoration:none;margin-top:18px;box-shadow:0 6px 18px rgba(11,108,184,.32);transition:transform .12s ease,box-shadow .12s ease}
+  /* CTA + shimmer */
+  .cta{position:relative;overflow:hidden;display:block;text-align:center;background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;font-weight:700;font-size:clamp(.78rem,3.4vw,1.08rem);padding:16px clamp(12px,3vw,22px);border-radius:13px;text-decoration:none;margin-top:18px;box-shadow:0 6px 18px rgba(11,108,184,.32);transition:transform .12s ease,box-shadow .12s ease;white-space:nowrap;line-height:1.35}
+  .cta::after{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);animation:shimmer 2.8s ease-in-out infinite;pointer-events:none}
   .cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(11,108,184,.4)}
   .cta:active{transform:translateY(0)}
   .ordered{text-align:center;font-size:.84rem;color:var(--text);margin-top:10px}
@@ -237,8 +254,10 @@
   .final .pricerow{justify-content:center}
   .final .price-now{color:#fff}.final .price-old{color:#bcd6ec}
   .final .cta{background:#fff;color:var(--blue-dark);box-shadow:0 6px 18px rgba(0,0,0,.2)}
+  .final .cta::after{background:linear-gradient(90deg,transparent,rgba(11,108,184,.18),transparent)}
   .final .trust{color:#cfe4f5}
-  .final .figslot{margin:0 auto 18px;max-width:220px;border:none;background:#fff}
+  .final-product-img{width:148px;height:148px;margin:0 auto 18px;background:#fff;border:none;border-radius:14px;padding:0;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  .final-product-img img{width:100%;height:100%;object-fit:contain;display:block}
 
   /* disclaimer + footer */
   .disc{font-size:.8rem;color:var(--muted);line-height:1.6;margin-top:26px}
@@ -256,7 +275,7 @@
   .sbar .si{flex:1;min-width:0;line-height:1.2}
   .sbar .si b{font-size:.86rem;color:var(--ink);display:block}
   .sbar .si span{font-size:.74rem;color:var(--muted)}
-  .sbar .cta{margin:0;padding:11px 18px;font-size:.92rem;white-space:nowrap;flex:none}
+  .sbar .cta{margin:0;padding:11px clamp(10px,2.5vw,18px);font-size:clamp(.72rem,3.2vw,.92rem);white-space:nowrap;flex:none}
   @media(max-width:480px){.sbar .si span{display:none}}
 
   /* image slots */
@@ -271,17 +290,23 @@
   .hero-fig{margin-top:22px;margin-bottom:0}
 
   :focus-visible{outline:3px solid rgba(11,108,184,.45);outline-offset:2px;border-radius:6px}
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+  @media(max-width:600px){.logo-name{font-size:14px}.logo-tagline{display:none}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.cta::after,.strip::after{animation:none!important}}
 </style>
 </head>
 <body>
 
-<div class="strip">Independent consumer comparison · Last updated: June 2026</div>
+<div class="strip">Independent consumer comparison · Last updated:&nbsp;June&nbsp;2026</div>
 
 <header>
   <div class="hbar">
-    <div class="logo">CF</div>
-    <div class="brand"><b>Consumer Focus UK</b><span>Comparison &amp; Review</span></div>
+    <div class="logo">
+      <img class="logo-mark" src="https://www.verbraucherfokus-test.de/logo.png" alt="Consumer Focus UK" width="34" height="34">
+      <div class="logo-text">
+        <div class="logo-name">Consumer Focus UK</div>
+        <div class="logo-tagline">Comparison &amp; Review</div>
+      </div>
+    </div>
     <div class="hbadge">✓ Editorially reviewed</div>
   </div>
 </header>
@@ -316,7 +341,7 @@
 </section>
 
 <!-- INTRO -->
-<section style="padding-top:6px">
+<section class="intro">
   <div class="wrap">
     <p>Most nail fungus treatments are a waste of money. Creams sit on the surface and never reach where it matters. Drops drip everywhere. Pharmacy brands charge £30+ for a single-ingredient formula dressed up in clever packaging. After 8 weeks testing 50+ pens across the UK, I found only three worth recommending — and one that left everything else behind.</p>
     <p>The <strong>pen format</strong> has taken over for good reason — a slim brush-tip applicator you swipe on twice a day. No mess, no fuss, discreet. But one question keeps coming up: <strong>does it actually work, or is it just clever marketing?</strong> The honest answer depends entirely on which pen you buy. The differences between brands are <strong>huge</strong> — same price, completely different formula.</p>
@@ -338,7 +363,7 @@
         <li>Real user experience over weeks of use</li>
       </ul>
     </div>
-    <p style="margin-top:18px">👉 One product pulled clearly ahead. Here's the breakdown.</p>
+    <p class="intro-cta">👉 One product pulled clearly ahead. Here's the breakdown.</p>
   </div>
 </section>
 
@@ -414,7 +439,7 @@
     </div>
 
     <!-- #2 -->
-    <div class="card">
+    <div class="card" id="second-product">
       <span class="rank">#2</span>
       <div class="chead">
         <div class="picon"><img src="https://bestbuyguide.org/wp-content/uploads/2025/11/funguspentop2-1.png" alt="Fleming Medical Fungal Nail Pen"></div>
@@ -575,17 +600,17 @@
     <div class="tcard">
       <div class="ts">★★★★★</div>
       <p>"I'd tried creams for months with nothing to show for it. The brush is the bit that won me over — it actually gets right into the edges. Three weeks in and I'm finally not embarrassed to wear sandals."</p>
-      <div class="tfoot"><div class="avatar">SM</div><div><b>Sarah M.</b><br><span>Manchester</span></div><span class="verified">✓ Verified</span></div>
+      <div class="tfoot"><div class="avatar"><img src="images/sarah-t.jpg" alt="Sarah M." width="36" height="36" loading="lazy" decoding="async"></div><div><b>Sarah M.</b><br><span>Manchester</span></div><span class="verified">✓ Verified</span></div>
     </div>
     <div class="tcard">
       <div class="ts">★★★★★</div>
       <p>"Sceptical at first, I'll admit. But it dries in seconds, there's no greasy mess and I can pop it in my bag. Easiest thing I've added to my routine in ages."</p>
-      <div class="tfoot"><div class="avatar">JT</div><div><b>James T.</b><br><span>Bristol</span></div><span class="verified">✓ Verified</span></div>
+      <div class="tfoot"><div class="avatar"><img src="images/david-m.jpg" alt="James T." width="36" height="36" loading="lazy" decoding="async"></div><div><b>James T.</b><br><span>Bristol</span></div><span class="verified">✓ Verified</span></div>
     </div>
     <div class="tcard">
       <div class="ts">★★★★☆</div>
       <p>"Lovely and simple — brush on twice a day and that's it. I like how discreet it is. Curious to see how my nails look after a couple of months, but I'm pleased so far."</p>
-      <div class="tfoot"><div class="avatar">LP</div><div><b>Linda P.</b><br><span>Leeds</span></div><span class="verified">✓ Verified</span></div>
+      <div class="tfoot"><div class="avatar"><img src="images/jennifer-l.jpg" alt="Linda P." width="36" height="36" loading="lazy" decoding="async"></div><div><b>Linda P.</b><br><span>Leeds</span></div><span class="verified">✓ Verified</span></div>
     </div>
   </div>
 </section>
@@ -619,9 +644,9 @@
 <section>
   <div class="wrap">
     <div class="final">
-      <figure class="figslot ph" data-img="product">
-        <div class="phin"><div class="ico">🖼️</div><b>Orivelle product image</b><span>add URL to IMAGES.product</span></div>
-      </figure>
+      <div class="final-product-img">
+        <img src="images/abc.webp" alt="Orivelle Nail Fungus Pen" width="148" height="148" loading="lazy" decoding="async">
+      </div>
       <div class="ff">🏆 Don't miss this offer</div>
       <h3>Orivelle Nail Fungus Pen</h3>
       <div class="ts">★★★★★ · 9.9/10</div>
@@ -692,10 +717,10 @@
     }catch(e){}
   })();
 
-  // Sticky bar: show once user scrolls to the first product in Top 3
+  // Sticky bar: show once user scrolls to product #2
   (function(){
     var bar=document.getElementById('sticky');
-    var target=document.getElementById('first-product');
+    var target=document.getElementById('second-product');
     if(!bar||!target) return;
     function onScroll(){
       if(target.getBoundingClientRect().top<window.innerHeight*0.9){
