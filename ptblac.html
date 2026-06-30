@@ -43,6 +43,7 @@ body {
   color: var(--text);
   background: var(--white);
   -webkit-font-smoothing: antialiased;
+  padding-bottom: 76px;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -178,6 +179,12 @@ h1 em {
   color: #fff; font-weight: 700; font-size: 14px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
+}
+.avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .byline-name { font-size: 14px; font-weight: 700; color: #111; }
 .byline-meta { font-size: 12px; color: var(--muted); margin-top: 1px; }
@@ -419,19 +426,18 @@ h1 em {
 .card-img {
   width: 130px; height: 160px;
   border-radius: 10px;
-  background: #f0f4ff;
-  border: 2px dashed #9ab0d9;
+  background: #fff;
+  border: 1px solid #e8eef5;
   display: flex; align-items: center; justify-content: center;
-  flex-direction: column; gap: 6px;
   flex-shrink: 0;
-  text-align: center;
+  overflow: hidden;
 }
-.card-img .img-icon { font-size: 32px; }
-.card-img .img-label {
-  font-size: 10px; font-weight: 600;
-  color: #7a96c4; line-height: 1.3;
-  padding: 0 8px;
-  text-transform: uppercase; letter-spacing: 0.05em;
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 6px;
 }
 .card-brand {
   font-size: 20px; font-weight: 800;
@@ -600,21 +606,19 @@ h1 em {
 }
 .bonus-card-img {
   width: 120px; height: 140px;
-  border: 2px dashed #fcd34d;
+  border: 1px solid #fcd34d;
   border-radius: 10px;
-  display: flex; flex-direction: column;
+  display: flex;
   align-items: center; justify-content: center;
-  background: #fef9ee;
-  color: #92400e;
-  gap: 6px;
-  font-size: 28px;
-  text-align: center;
+  background: #fff;
+  overflow: hidden;
 }
-.bonus-card-img .img-label {
-  font-size: 10px; font-weight: 600;
-  color: #92400e; line-height: 1.3;
-  padding: 0 8px;
-  text-transform: uppercase; letter-spacing: 0.05em;
+.bonus-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 6px;
 }
 .bonus-card-text { font-size: 14px; line-height: 1.7; color: #78350f; }
 .bonus-card-text strong { color: #92400e; }
@@ -671,6 +675,12 @@ h1 em {
   color: #fff; font-weight: 700; font-size: 12px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
+}
+.testi-av img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .testi-name { font-size: 13px; font-weight: 700; color: #222; }
 .testi-loc { font-size: 12px; color: var(--muted); }
@@ -831,8 +841,48 @@ h1 em {
 footer {
   background: var(--bg);
   border-top: 1px solid var(--border);
-  padding: 28px 20px 32px;
+  padding: 36px 24px;
   text-align: center;
+}
+.footer-winner {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 18px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.footer-winner-img {
+  width: 64px; height: 64px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.footer-winner-img img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+.footer-winner-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 3px;
+}
+.footer-winner-name {
+  font-size: 15px; font-weight: 800;
+  color: #0f172a; line-height: 1.2;
+}
+.footer-winner-score {
+  font-size: 13px; color: #475569; margin-top: 4px;
+}
+.footer-winner-rating {
+  color: var(--green);
+  font-weight: 800;
 }
 .footer-links {
   display: flex; justify-content: center;
@@ -855,6 +905,27 @@ footer {
   font-size: 11px; color: #bbb;
   max-width: var(--max); margin: 0 auto;
   line-height: 1.55;
+}
+
+/* STICKY FOOTER BAR — full-width CTA only */
+.sticky-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 200;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -3px 14px rgba(16,40,70,.08);
+  transform: translateY(110%);
+  transition: transform 0.3s ease;
+}
+.sticky-bar.show { transform: translateY(0); }
+.sticky-bar-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 12px 16px;
+}
+.sticky-bar .btn-green {
+  border-radius: 9px;
 }
 
 /* RESPONSIVE */
@@ -918,7 +989,7 @@ footer {
   <p id="page-sub" class="lead">Wir haben außerdem ein Sonderangebot und eine 30-tägige Risikofreiheit für unsere Leser ausgehandelt. Lesen Sie bis zum Ende.</p>
 
   <div class="byline">
-    <div class="avatar">LK</div>
+    <div class="avatar"><img src="images/person.webp" alt="Laura Klein" width="40" height="40"></div>
     <div>
       <div class="byline-name">Laura Klein</div>
       <div class="byline-meta">Leitende Redakteurin, Better Product Choice &nbsp;·&nbsp; Geprüft &amp; Verglichen &nbsp;·&nbsp; 7 Min Lesezeit</div>
@@ -1064,7 +1135,7 @@ footer {
       <span class="badge">TOP PICK</span>
     </div>
     <div class="card-overview">
-      <div class="card-img"><span class="img-icon">📷</span><span class="img-label">Produktbild<br>hier einfügen</span></div>
+      <div class="card-img"><img src="images/ptblac/airzuma-product-hd.png" alt="AirZuma tragbares Klimagerät" width="130" height="160" loading="lazy"></div>
       <div class="card-meta">
         <div class="card-brand">AirZuma</div>
         <div class="score-row">
@@ -1113,10 +1184,10 @@ footer {
   </div>
 
   <!-- CARD 2 -->
-  <div class="card">
+  <div class="card" id="product-2">
     <div class="card-header-runner">#2 &nbsp;·&nbsp; Zweiter Platz</div>
     <div class="card-overview">
-      <div class="card-img"><span class="img-icon">📷</span><span class="img-label">Produktbild<br>hier einfügen</span></div>
+      <div class="card-img"><img src="images/ptblac/airzuma-white.jpg" alt="FrostBreeze Pro" width="130" height="160" loading="lazy"></div>
       <div class="card-meta">
         <div class="card-brand">FrostBreeze Pro</div>
         <div class="score-row">
@@ -1156,7 +1227,7 @@ footer {
   <div class="card">
     <div class="card-header-runner">#3 &nbsp;·&nbsp; Dritter Platz</div>
     <div class="card-overview">
-      <div class="card-img"><span class="img-icon">📷</span><span class="img-label">Produktbild<br>hier einfügen</span></div>
+      <div class="card-img"><img src="images/ptblac/airzuma-green.jpg" alt="CoolWave X" width="130" height="160" loading="lazy"></div>
       <div class="card-meta">
         <div class="card-brand">CoolWave X</div>
         <div class="score-row">
@@ -1202,7 +1273,7 @@ footer {
     </div>
     <div class="bonus-card-body">
       <div class="bonus-card-overview">
-        <div class="bonus-card-img">📷<span class="img-label">Produktbild<br>hier einfügen</span></div>
+        <div class="bonus-card-img"><img src="images/ptblac/airabreeze-hd.jpg" alt="AiraBreeze" width="120" height="140" loading="lazy"></div>
         <div>
           <p class="bonus-card-text"><strong>AiraBreeze</strong> hat unseren Test nicht auf Platz 1 geschafft — aber es hat uns überrascht. Für seinen Preis liefert es eine Kühlleistung, die deutlich über dem liegt, was wir erwartet haben. Es ist kompakter als AirZuma, hat einen kleineren Tank und kühlt einen Raum weniger stark ab — aber für ein einzelnes Zimmer oder einen Schreibtischbereich ist es eine ehrliche, günstigere Alternative.</p>
           <p class="bonus-card-text" style="margin-top:10px;">Wenn Ihr Budget begrenzt ist oder Sie ein zweites Gerät für ein kleineres Zimmer suchen — AiraBreeze ist die einzige günstigere Option, die wir nach unserem Test bedenkenlos nennen können.</p>
@@ -1225,7 +1296,7 @@ footer {
         <div class="testi-stars">★★★★★</div>
         <p class="testi-quote">„Ich hatte schon zwei andere Mini-Klimaanlagen ausprobiert und war jedes Mal enttäuscht. AirZuma ist das erste Gerät, das mein Schlafzimmer tatsächlich kühler macht. <strong>Nach einer Stunde war es messbar 3,5°C kühler</strong> — ich schlafe endlich wieder durch."</p>
         <div class="testi-author">
-          <div class="testi-av">MH</div>
+          <div class="testi-av"><img src="images/ptblac/testi-michael.jpg" alt="Michael H." width="34" height="34"></div>
           <div>
             <div class="testi-name">Michael H.</div>
             <div class="testi-loc">München &nbsp;·&nbsp; Verifizierter Kauf</div>
@@ -1237,7 +1308,7 @@ footer {
         <div class="testi-stars">★★★★★</div>
         <p class="testi-quote">„Was mich überzeugt hat, war die Stille. Ich bin ein sehr leichter Schläfer — andere Geräte haben mich wachgehalten. AirZuma läuft im Schlafmodus so leise, dass ich es kaum höre. <strong>Und das Zimmer ist tatsächlich kühler.</strong> Endlich."</p>
         <div class="testi-author">
-          <div class="testi-av">SK</div>
+          <div class="testi-av"><img src="images/ptblac/testi-sabine.jpg" alt="Sabine K." width="34" height="34"></div>
           <div>
             <div class="testi-name">Sabine K.</div>
             <div class="testi-loc">Berlin &nbsp;·&nbsp; Verifizierter Kauf</div>
@@ -1249,7 +1320,7 @@ footer {
         <div class="testi-stars">★★★★★</div>
         <p class="testi-quote">„Mein Büro hat keine Klimaanlage und wird im Sommer unerträglich heiß. Ich hatte CoolWave X vorher — kaum Wirkung. AirZuma ist eine andere Welt. <strong>Ich arbeite jetzt wieder produktiv</strong>, ohne nach einer Stunde komplett erschöpft zu sein."</p>
         <div class="testi-author">
-          <div class="testi-av">TR</div>
+          <div class="testi-av"><img src="images/ptblac/testi-thomas.jpg" alt="Thomas R." width="34" height="34"></div>
           <div>
             <div class="testi-name">Thomas R.</div>
             <div class="testi-loc">Hamburg &nbsp;·&nbsp; Verifizierter Kauf</div>
@@ -1261,7 +1332,7 @@ footer {
         <div class="testi-stars">★★★★★</div>
         <p class="testi-quote">„Die Garantie hat mir die Entscheidung leicht gemacht. Wenn es nicht kühlt, bekomme ich mein Geld zurück. <strong>Es kühlt. Ich habe die Garantie nicht gebraucht.</strong> Aber zu wissen, dass sie da ist, hat mir den letzten Anstoß gegeben."</p>
         <div class="testi-author">
-          <div class="testi-av">AF</div>
+          <div class="testi-av"><img src="images/ptblac/testi-anna.jpg" alt="Anna F." width="34" height="34"></div>
           <div>
             <div class="testi-name">Anna F.</div>
             <div class="testi-loc">Frankfurt &nbsp;·&nbsp; Verifizierter Kauf</div>
@@ -1283,7 +1354,7 @@ footer {
       <p>Die drei Geräte, die Sie hier sehen, haben jeden Prüfpunkt bestanden. Das bedeutet nicht, dass sie perfekt sind. Es bedeutet, dass sie die einzigen sind, bei denen wir sagen können: Wenn Sie ein tragbares Klimagerät kaufen möchten, sind das die Optionen, die wir nach unserem Test für vertretbar halten.</p>
       <p>Die Frage, die wir bei jedem Gerät gestellt haben: <em>Würden wir das jemandem empfehlen, dem wir vertrauen?</em> Bei AirZuma lautet die Antwort klar ja — wegen der Kühlleistung, der Lautstärke, der Garantie und des Preises. FrostBreeze Pro und CoolWave X sind legitime Produkte, die unseren Mindeststandard erfüllt haben — sie haben in mehr Kategorien schlechter abgeschnitten und sind deshalb nicht unsere erste Empfehlung.</p>
       <div class="editor-sig">
-        <div class="avatar">LK</div>
+        <div class="avatar"><img src="images/person.webp" alt="Laura Klein" width="40" height="40"></div>
         <div>
           <div class="editor-sig-name">Laura Klein</div>
           <div class="editor-sig-role">Leitende Redakteurin &nbsp;·&nbsp; Better Product Choice</div>
@@ -1362,6 +1433,16 @@ footer {
 
 <!-- FOOTER -->
 <footer>
+  <div class="footer-winner">
+    <div class="footer-winner-img">
+      <img src="images/ptblac/airzuma-product-hd.png" alt="AirZuma" width="64" height="64" loading="lazy">
+    </div>
+    <div>
+      <div class="footer-winner-label">Unser Testsieger</div>
+      <div class="footer-winner-name">AirZuma</div>
+      <div class="footer-winner-score">Bewertet mit <span class="footer-winner-rating">9,4/10</span> in unserem unabhängigen Vergleich</div>
+    </div>
+  </div>
   <div class="footer-links">
     <a href="#">Über uns</a>
     <a href="#">Datenschutz</a>
@@ -1371,6 +1452,13 @@ footer {
   <p class="footer-copy">© 2026 Better Product Choice. Alle Rechte vorbehalten.</p>
   <p class="footer-disc">Better Product Choice ist eine unabhängige Verbraucher-Testpublikation. Wir erhalten möglicherweise eine Provision, wenn Sie über Links auf dieser Seite einkaufen. Dies finanziert unseren unabhängigen Testprozess und hat keinen Einfluss auf unsere redaktionellen Bewertungen oder Empfehlungen. Individuelle Ergebnisse können variieren. Diese Seite ist nicht mit einem Hersteller, einem Elektronikhändler oder einer Verbraucherschutzbehörde verbunden.</p>
 </footer>
+
+<!-- STICKY FOOTER BAR -->
+<div class="sticky-bar" id="sticky-bar">
+  <div class="sticky-bar-inner">
+    <a href="https://get-airzuma.com/pp/de/" class="btn-green">Jetzt AirZuma mit Sonderangebot sichern →</a>
+  </div>
+</div>
 
 <script>
 // Dynamic H1
@@ -1413,6 +1501,31 @@ const H1 = {
   }
   window.addEventListener('scroll', update, { passive: true });
   update();
+})();
+
+// Sticky footer bar — shows after #2 card; hides when #1 or final CTA is on screen (altv2 pattern)
+(function () {
+  const bar = document.getElementById('sticky-bar');
+  const product2 = document.getElementById('product-2');
+  const product1 = document.getElementById('product-1');
+  const finalCta = document.querySelector('.final-cta');
+  if (!bar || !product2) return;
+
+  function isInViewport(el) {
+    if (!el) return false;
+    const r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  }
+
+  function updateStickyBar() {
+    const triggered = product2.getBoundingClientRect().top < window.innerHeight * 0.9;
+    const inlineCtaVisible = isInViewport(product1) || isInViewport(finalCta);
+    bar.classList.toggle('show', triggered && !inlineCtaVisible);
+  }
+
+  window.addEventListener('scroll', updateStickyBar, { passive: true });
+  window.addEventListener('resize', updateStickyBar);
+  updateStickyBar();
 })();
 
 // FAQ
